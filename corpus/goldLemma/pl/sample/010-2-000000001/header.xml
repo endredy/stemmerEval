@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE teiHeader SYSTEM "header.dtd">
+<teiHeader xmlns="http://www.tei-c.org/ns/1.0" xmlns:nkjp="http://www.nkjp.pl/ns/1.0" xml:lang="en" xml:id="NKJP_1M_0102000000001">
+ <fileDesc>
+  <titleStmt>
+   <title>TEI P5 encoded version of sample(s) of "Przyszłość… przeszłości"</title>
+  </titleStmt>
+  <extent nkjp:file="text.xml">
+   <num type="word" value="372"/>
+  </extent>
+  <publicationStmt nkjp:subcorpus="one_million">
+   <availability status="free">
+    <p>See the licence agreement.</p>
+   </availability>
+  </publicationStmt>
+  <sourceDesc>
+   <bibl xml:id="h_src-bibl">
+    <title xml:lang="pl">Przyszłość… przeszłości</title>
+    <author>Bieńkowski Zbigniew</author>
+    <date type="published" when="1996">1996</date>
+    <publisher>Wyd. Dolnośląskie</publisher>
+    <pubPlace>Wrocław</pubPlace>
+    <idno type="nkjp">PWN_0102000000001</idno>
+    <note type="text_origin">PWN Corpus</note>
+   </bibl>
+   <listBibl>
+    <bibl xml:id="h_1-bibl">
+     <ptr target="#txt_1-div"/>
+     <idno type="para">p299in332</idno>
+    </bibl>
+    <bibl xml:id="h_2-bibl">
+     <ptr target="#txt_2-div"/>
+     <idno type="para">p82in90</idno>
+    </bibl>
+    <bibl xml:id="h_3-bibl">
+     <ptr target="#txt_3-div"/>
+     <idno type="para">p188in196</idno>
+    </bibl>
+    <bibl xml:id="h_4-bibl">
+     <ptr target="#txt_4-div"/>
+     <idno type="para">p159in167</idno>
+    </bibl>
+    <bibl xml:id="h_5-bibl">
+     <ptr target="#txt_5-div"/>
+     <idno type="para">p87in95</idno>
+    </bibl>
+    <bibl xml:id="h_6-bibl">
+     <ptr target="#txt_6-div"/>
+     <idno type="para">p24in32</idno>
+    </bibl>
+    <bibl xml:id="h_7-bibl">
+     <ptr target="#txt_7-div"/>
+     <idno type="para">p109in117</idno>
+    </bibl>
+   </listBibl>
+  </sourceDesc>
+ </fileDesc>
+ <profileDesc>
+  <textClass>
+   <catRef scheme="#taxonomy-NKJP-type" target="#typ_nd"/>
+   <catRef scheme="#taxonomy-NKJP-channel" target="#kanal_ksiazka"/>
+  </textClass>
+ </profileDesc>
+ <revisionDesc xml:id="changelog_local">
+  <change who="#ldegorski" when="2010-03-01">Creation of text.xml from the corresponding pre_text.xml, by sampling.</change>
+  <change who="#sebastianz" when="2010-03-03">Manual correction of samples.</change>
+  <change who="#ldegorski" when="2010-03-10">Creation of header.xml based on the original header and text.xml, validation.</change>
+  <change who="#mlenart" when="2011-06-22">Added morphosyntax corrections done by syntax groups and words annotators</change>
+ </revisionDesc>
+</teiHeader>

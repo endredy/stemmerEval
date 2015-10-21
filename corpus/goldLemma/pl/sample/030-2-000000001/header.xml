@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE teiHeader SYSTEM "header.dtd">
+<teiHeader xmlns="http://www.tei-c.org/ns/1.0" xmlns:nkjp="http://www.nkjp.pl/ns/1.0" xml:lang="en" xml:id="NKJP_1M_0302000000001">
+ <fileDesc>
+  <titleStmt>
+   <title>TEI P5 encoded version of sample(s) of "Cudzoziemka"</title>
+  </titleStmt>
+  <extent nkjp:file="text.xml">
+   <num type="word" value="700"/>
+  </extent>
+  <publicationStmt nkjp:subcorpus="one_million">
+   <availability status="free">
+    <p>See the licence agreement.</p>
+   </availability>
+  </publicationStmt>
+  <sourceDesc>
+   <bibl xml:id="h_src-bibl">
+    <title xml:lang="pl">Cudzoziemka</title>
+    <author>Maria Kuncewiczowa</author>
+    <date type="published" when="1995">1995</date>
+    <publisher>Książka i Wiedza</publisher>
+    <pubPlace>Warszawa</pubPlace>
+    <idno type="nkjp">PWN_0302000000001</idno>
+    <note type="text_origin">PWN Corpus</note>
+   </bibl>
+   <listBibl>
+    <bibl xml:id="h_1-bibl">
+     <ptr target="#txt_1-div"/>
+     <idno type="para">p882in890</idno>
+    </bibl>
+    <bibl xml:id="h_2-bibl">
+     <ptr target="#txt_2-div"/>
+     <idno type="para">p45in53</idno>
+    </bibl>
+    <bibl xml:id="h_3-bibl">
+     <ptr target="#txt_3-div"/>
+     <idno type="para">p804in812</idno>
+    </bibl>
+    <bibl xml:id="h_4-bibl">
+     <ptr target="#txt_4-div"/>
+     <idno type="para">p114in122</idno>
+    </bibl>
+    <bibl xml:id="h_5-bibl">
+     <ptr target="#txt_5-div"/>
+     <idno type="para">p1275in1283</idno>
+    </bibl>
+    <bibl xml:id="h_6-bibl">
+     <ptr target="#txt_6-div"/>
+     <idno type="para">p100in108</idno>
+    </bibl>
+    <bibl xml:id="h_7-bibl">
+     <ptr target="#txt_7-div"/>
+     <idno type="para">p1785in1793</idno>
+    </bibl>
+    <bibl xml:id="h_8-bibl">
+     <ptr target="#txt_8-div"/>
+     <idno type="para">p1013in1021</idno>
+    </bibl>
+    <bibl xml:id="h_9-bibl">
+     <ptr target="#txt_9-div"/>
+     <idno type="para">p167in175</idno>
+    </bibl>
+    <bibl xml:id="h_10-bibl">
+     <ptr target="#txt_10-div"/>
+     <idno type="para">p1240in1248</idno>
+    </bibl>
+    <bibl xml:id="h_11-bibl">
+     <ptr target="#txt_11-div"/>
+     <idno type="para">p921in929</idno>
+    </bibl>
+    <bibl xml:id="h_12-bibl">
+     <ptr target="#txt_12-div"/>
+     <idno type="para">p878in886</idno>
+    </bibl>
+   </listBibl>
+  </sourceDesc>
+ </fileDesc>
+ <profileDesc>
+  <textClass>
+   <catRef scheme="#taxonomy-NKJP-type" target="#typ_lit"/>
+   <catRef scheme="#taxonomy-NKJP-channel" target="#kanal_ksiazka"/>
+  </textClass>
+ </profileDesc>
+ <revisionDesc xml:id="changelog_local">
+  <change who="#ldegorski" when="2010-02-18">Creation of text.xml from the corresponding pre_text.xml, by sampling.</change>
+  <change who="#sebastianz" when="2010-02-19">Manual correction of samples.</change>
+  <change who="#ldegorski" when="2010-02-20">Creation of header.xml based on the original header and text.xml, validation.</change>
+ </revisionDesc>
+</teiHeader>

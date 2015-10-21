@@ -1,0 +1,3436 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<teiCorpus xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:nkjp="http://www.nkjp.pl/ns/1.0" xmlns="http://www.tei-c.org/ns/1.0">
+  <xi:include href="NKJP_1M_header.xml"/>
+  <TEI>
+    <xi:include href="header.xml"/>
+    <text xml:lang="pl">
+      <body>
+        <p xml:id="groups_1-p" corresp="ann_words.xml#words_1-p">
+          <s xml:id="groups_1.6-s" corresp="ann_words.xml#words_1.6-s">
+            <seg xml:id="groups_1.6-s_gad">
+              <fs type="group">
+                <f name="orth">
+                  <string>Łzy</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_1.6-s_sa9"/>
+            </seg>
+            <seg xml:id="groups_1.6-s_gac">
+              <fs type="group">
+                <f name="orth">
+                  <string>na cremoński lakier</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_1.6-s_sa8"/>
+              <ptr type="nonhead" target="ann_words.xml#words_1.6-s_sa6"/>
+              <ptr type="semh" target="ann_words.xml#words_1.6-s_saa"/>
+            </seg>
+          </s>
+          <s xml:id="groups_1.28-s" corresp="ann_words.xml#words_1.28-s">
+            <seg xml:id="groups_1.28-s_ga32">
+              <fs type="group">
+                <f name="orth">
+                  <string>przedmiotu</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_1.28-s_sa2a"/>
+            </seg>
+            <seg xml:id="groups_1.28-s_ga31">
+              <fs type="group">
+                <f name="orth">
+                  <string>na który</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepAdjG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_1.28-s_sa28"/>
+              <ptr type="semh" target="ann_words.xml#words_1.28-s_sa22"/>
+            </seg>
+            <seg xml:id="groups_1.28-s_ga33">
+              <fs type="group">
+                <f name="orth">
+                  <string>ojciec</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_1.28-s_sa2b"/>
+            </seg>
+            <seg xml:id="groups_1.28-s_ga34">
+              <fs type="group">
+                <f name="orth">
+                  <string>biedaczysko</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_1.28-s_sa2c"/>
+            </seg>
+            <seg xml:id="groups_1.28-s_ga2f">
+              <fs type="group">
+                <f name="orth">
+                  <string>całą schedę</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_1.28-s_sa23"/>
+              <ptr type="head" target="ann_words.xml#words_1.28-s_sa2d"/>
+            </seg>
+            <seg xml:id="groups_1.28-s_ga30">
+              <fs type="group">
+                <f name="orth">
+                  <string>po Luizie</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_1.28-s_sa29"/>
+              <ptr type="semh" target="ann_words.xml#words_1.28-s_sa2e"/>
+            </seg>
+          </s>
+          <s xml:id="groups_1.35-s" corresp="ann_words.xml#words_1.35-s">
+            <seg xml:id="groups_1.35-s_ga42">
+              <fs type="group">
+                <f name="orth">
+                  <string>je</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_1.35-s_sa40"/>
+            </seg>
+            <seg xml:id="groups_1.35-s_ga43">
+              <fs type="group">
+                <f name="orth">
+                  <string>lewą</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdjG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_1.35-s_sa3b"/>
+            </seg>
+            <seg xml:id="groups_1.35-s_ga41">
+              <fs type="group">
+                <f name="orth">
+                  <string>umęczoną ręką</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_1.35-s_sa3c"/>
+              <ptr type="head" target="ann_words.xml#words_1.35-s_sa3f"/>
+            </seg>
+          </s>
+          <s xml:id="groups_1.38-s" corresp="ann_words.xml#words_1.38-s">
+            <seg xml:id="groups_1.38-s_ga4b">
+              <fs type="group">
+                <f name="orth">
+                  <string>Adam</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_1.38-s_sa4a"/>
+            </seg>
+          </s>
+          <s xml:id="groups_1.44-s" corresp="ann_words.xml#words_1.44-s">
+            <seg xml:id="groups_1.44-s_ga56">
+              <fs type="group">
+                <f name="orth">
+                  <string>wodą kwiatową Maréchal Niel</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_1.44-s_sa53"/>
+              <ptr type="nonhead" target="ann_words.xml#words_1.44-s_sa51"/>
+              <ptr type="nonhead" target="ann_words.xml#words_1.44-s_sa54"/>
+              <ptr type="nonhead" target="ann_words.xml#words_1.44-s_sa55"/>
+            </seg>
+          </s>
+          <s xml:id="groups_1.50-s" corresp="ann_words.xml#words_1.50-s">
+            <seg xml:id="groups_1.50-s_ga64">
+              <fs type="group">
+                <f name="orth">
+                  <string>Starannie</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_1.50-s_sa5d"/>
+            </seg>
+            <seg xml:id="groups_1.50-s_ga63">
+              <fs type="group">
+                <f name="orth">
+                  <string>drzwi</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_1.50-s_sa60"/>
+            </seg>
+            <seg xml:id="groups_1.50-s_ga62">
+              <fs type="group">
+                <f name="orth">
+                  <string>za sobą</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNGp"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_1.50-s_sa5f"/>
+              <ptr type="semh" target="ann_words.xml#words_1.50-s_sa61"/>
+            </seg>
+          </s>
+          <s xml:id="groups_1.55-s" corresp="ann_words.xml#words_1.55-s">
+            <seg xml:id="groups_1.55-s_ga6f">
+              <fs type="group">
+                <f name="orth">
+                  <string>dalej</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_1.55-s_sa6a"/>
+            </seg>
+            <seg xml:id="groups_1.55-s_ga6e">
+              <fs type="group">
+                <f name="orth">
+                  <string>w bezruchu</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_1.55-s_sa6c"/>
+              <ptr type="semh" target="ann_words.xml#words_1.55-s_sa6d"/>
+            </seg>
+          </s>
+        </p>
+        <p xml:id="groups_2-p" corresp="ann_words.xml#words_2-p">
+          <s xml:id="groups_2.32-s" corresp="ann_words.xml#words_2.32-s">
+            <seg xml:id="groups_2.32-s_gab3">
+              <fs type="group">
+                <f name="orth">
+                  <string>, kiedy panna Aniela Bądska ukończy gamy i zechce łaskawie zaakompaniować jedynej uczennicy papy "Moment musical" Szuberta.</string>
+                </f>
+                <f name="type">
+                  <symbol value="KG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_2.32-s_sa94"/>
+              <ptr type="nonhead" target="groups_2.32-s_gab1"/>
+              <ptr type="nonhead" target="groups_2.32-s_gaa8"/>
+              <ptr type="semh" target="ann_words.xml#words_2.32-s_sa89"/>
+              <ptr type="nonhead" target="groups_2.32-s_gaae"/>
+              <ptr type="nonhead" target="ann_words.xml#words_2.32-s_sa91"/>
+              <ptr type="nonhead" target="ann_words.xml#words_2.32-s_sa8a"/>
+              <ptr type="nonhead" target="groups_2.32-s_gab2"/>
+              <ptr type="nonhead" target="ann_words.xml#words_2.32-s_sa8b"/>
+              <ptr type="nonhead" target="groups_2.32-s_gaaa"/>
+              <ptr type="nonhead" target="groups_2.32-s_gaac"/>
+              <ptr type="nonhead" target="ann_words.xml#words_2.32-s_sa97"/>
+            </seg>
+            <seg xml:id="groups_2.32-s_gab1">
+              <fs type="group">
+                <f name="orth">
+                  <string>kiedy</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_2.32-s_sa8e"/>
+            </seg>
+            <seg xml:id="groups_2.32-s_gaa8">
+              <fs type="group">
+                <f name="orth">
+                  <string>panna Aniela Bądska</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_2.32-s_sa9d"/>
+              <ptr type="nonhead" target="ann_words.xml#words_2.32-s_sa9e"/>
+              <ptr type="nonhead" target="ann_words.xml#words_2.32-s_sa9f"/>
+            </seg>
+            <seg xml:id="groups_2.32-s_gaae">
+              <fs type="group">
+                <f name="orth">
+                  <string>gamy</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_2.32-s_saa0"/>
+            </seg>
+            <seg xml:id="groups_2.32-s_gab2">
+              <fs type="group">
+                <f name="orth">
+                  <string>łaskawie</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_2.32-s_sa8f"/>
+            </seg>
+            <seg xml:id="groups_2.32-s_gaaa">
+              <fs type="group">
+                <f name="orth">
+                  <string>jedynej uczennicy papy</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_2.32-s_sa8d"/>
+              <ptr type="head" target="ann_words.xml#words_2.32-s_saa1"/>
+              <ptr type="nonhead" target="ann_words.xml#words_2.32-s_saa2"/>
+            </seg>
+            <seg xml:id="groups_2.32-s_gaac">
+              <fs type="group">
+                <f name="orth">
+                  <string>"Moment musical" Szuberta</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_2.32-s_sa95"/>
+              <ptr type="head" target="ann_words.xml#words_2.32-s_saa3"/>
+              <ptr type="nonhead" target="ann_words.xml#words_2.32-s_saa4"/>
+              <ptr type="nonhead" target="ann_words.xml#words_2.32-s_sa96"/>
+              <ptr type="nonhead" target="ann_words.xml#words_2.32-s_saa5"/>
+            </seg>
+            <seg xml:id="groups_2.32-s_gaa7">
+              <fs type="group">
+                <f name="orth">
+                  <string>Pan dyrektor</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_2.32-s_sa99"/>
+              <ptr type="nonhead" target="ann_words.xml#words_2.32-s_sa9a"/>
+            </seg>
+            <seg xml:id="groups_2.32-s_gab0">
+              <fs type="group">
+                <f name="orth">
+                  <string>nieobecny</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdjG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_2.32-s_sa8c"/>
+            </seg>
+            <seg xml:id="groups_2.32-s_gaad">
+              <fs type="group">
+                <f name="orth">
+                  <string>Róża</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_2.32-s_sa9b"/>
+            </seg>
+            <seg xml:id="groups_2.32-s_gaab">
+              <fs type="group">
+                <f name="orth">
+                  <string>pod piecem</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_2.32-s_sa98"/>
+              <ptr type="semh" target="ann_words.xml#words_2.32-s_sa9c"/>
+            </seg>
+          </s>
+          <s xml:id="groups_2.45-s" corresp="ann_words.xml#words_2.45-s">
+            <seg xml:id="groups_2.45-s_gac1">
+              <fs type="group">
+                <f name="orth">
+                  <string>Jedynej uczennicy</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_2.45-s_sab7"/>
+              <ptr type="head" target="ann_words.xml#words_2.45-s_sabd"/>
+            </seg>
+            <seg xml:id="groups_2.45-s_gac4">
+              <fs type="group">
+                <f name="orth">
+                  <string>pierwszej "adeptce" skrzypiec Warszawskiego Konserwatorium</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_2.45-s_sab8"/>
+              <ptr type="head" target="ann_words.xml#words_2.45-s_sab6"/>
+              <ptr type="nonhead" target="ann_words.xml#words_2.45-s_sabe"/>
+              <ptr type="nonhead" target="ann_words.xml#words_2.45-s_sab9"/>
+              <ptr type="nonhead" target="ann_words.xml#words_2.45-s_sabf"/>
+            </seg>
+            <seg xml:id="groups_2.45-s_gac5">
+              <fs type="group">
+                <f name="orth">
+                  <string>na Tamce</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_2.45-s_sabc"/>
+              <ptr type="semh" target="ann_words.xml#words_2.45-s_sac0"/>
+            </seg>
+          </s>
+          <s xml:id="groups_2.73-s" corresp="ann_words.xml#words_2.73-s">
+            <seg xml:id="groups_2.73-s_gaf4">
+              <fs type="group">
+                <f name="orth">
+                  <string>Czarnej</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdjG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_2.73-s_sacd"/>
+            </seg>
+            <seg xml:id="groups_2.73-s_gae9">
+              <fs type="group">
+                <f name="orth">
+                  <string>chudej dziewczynie</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_2.73-s_sace"/>
+              <ptr type="head" target="ann_words.xml#words_2.73-s_sae0"/>
+            </seg>
+            <seg xml:id="groups_2.73-s_gaed">
+              <fs type="group">
+                <f name="orth">
+                  <string>z rumieńcami</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_2.73-s_sad9"/>
+              <ptr type="semh" target="ann_words.xml#words_2.73-s_sae1"/>
+            </seg>
+            <seg xml:id="groups_2.73-s_gaee">
+              <fs type="group">
+                <f name="orth">
+                  <string>jak płomień</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_2.73-s_sada"/>
+              <ptr type="semh" target="ann_words.xml#words_2.73-s_sae2"/>
+            </seg>
+            <seg xml:id="groups_2.73-s_gaef">
+              <fs type="group">
+                <f name="orth">
+                  <string>po śniadych policzkach</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_2.73-s_sadb"/>
+              <ptr type="nonhead" target="ann_words.xml#words_2.73-s_sacf"/>
+              <ptr type="semh" target="ann_words.xml#words_2.73-s_sae3"/>
+            </seg>
+            <seg xml:id="groups_2.73-s_gaf0">
+              <fs type="group">
+                <f name="orth">
+                  <string>z lśniącym długim warkoczem</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_2.73-s_sadc"/>
+              <ptr type="nonhead" target="ann_words.xml#words_2.73-s_sad0"/>
+              <ptr type="nonhead" target="ann_words.xml#words_2.73-s_sad1"/>
+              <ptr type="semh" target="ann_words.xml#words_2.73-s_sae4"/>
+            </seg>
+            <seg xml:id="groups_2.73-s_gaf1">
+              <fs type="group">
+                <f name="orth">
+                  <string>z kacapską wymową</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_2.73-s_sadd"/>
+              <ptr type="nonhead" target="ann_words.xml#words_2.73-s_sad2"/>
+              <ptr type="semh" target="ann_words.xml#words_2.73-s_sae5"/>
+            </seg>
+            <seg xml:id="groups_2.73-s_gaf2">
+              <fs type="group">
+                <f name="orth">
+                  <string>z niemodnym medalionem</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_2.73-s_sade"/>
+              <ptr type="nonhead" target="ann_words.xml#words_2.73-s_sad3"/>
+              <ptr type="semh" target="ann_words.xml#words_2.73-s_sae6"/>
+            </seg>
+            <seg xml:id="groups_2.73-s_gaf3">
+              <fs type="group">
+                <f name="orth">
+                  <string>na szyi</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_2.73-s_sadf"/>
+              <ptr type="semh" target="ann_words.xml#words_2.73-s_sae7"/>
+            </seg>
+          </s>
+        </p>
+        <p xml:id="groups_3-p" corresp="ann_words.xml#words_3-p">
+          <s xml:id="groups_3.5-s" corresp="ann_words.xml#words_3.5-s">
+            <seg xml:id="groups_3.5-s_gafe">
+              <fs type="group">
+                <f name="orth">
+                  <string>To wszystko</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_3.5-s_safa"/>
+              <ptr type="head" target="ann_words.xml#words_3.5-s_safd"/>
+            </seg>
+            <seg xml:id="groups_3.5-s_gaff">
+              <fs type="group">
+                <f name="orth">
+                  <string>nowe</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdjG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_3.5-s_safb"/>
+            </seg>
+          </s>
+          <s xml:id="groups_3.26-s" corresp="ann_words.xml#words_3.26-s">
+            <seg xml:id="groups_3.26-s_ga124">
+              <fs type="group">
+                <f name="orth">
+                  <string>Nowe także</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdjG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_3.26-s_sa109"/>
+              <ptr type="nonhead" target="ann_words.xml#words_3.26-s_sa110"/>
+            </seg>
+            <seg xml:id="groups_3.26-s_ga11c">
+              <fs type="group">
+                <f name="orth">
+                  <string>miesięczne wędrówki i sjesty</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_3.26-s_sa10a"/>
+              <ptr type="head" target="ann_words.xml#words_3.26-s_sa115"/>
+              <ptr type="nonhead" target="ann_words.xml#words_3.26-s_sa10d"/>
+              <ptr type="nonhead" target="ann_words.xml#words_3.26-s_sa118"/>
+            </seg>
+            <seg xml:id="groups_3.26-s_ga11f">
+              <fs type="group">
+                <f name="orth">
+                  <string>na grób męża</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_3.26-s_sa111"/>
+              <ptr type="semh" target="ann_words.xml#words_3.26-s_sa116"/>
+              <ptr type="nonhead" target="ann_words.xml#words_3.26-s_sa117"/>
+            </seg>
+            <seg xml:id="groups_3.26-s_ga120">
+              <fs type="group">
+                <f name="orth">
+                  <string>na cmentarnej ławeczce</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_3.26-s_sa112"/>
+              <ptr type="nonhead" target="ann_words.xml#words_3.26-s_sa10b"/>
+              <ptr type="semh" target="ann_words.xml#words_3.26-s_sa119"/>
+            </seg>
+            <seg xml:id="groups_3.26-s_ga121">
+              <fs type="group">
+                <f name="orth">
+                  <string>ze wzrokiem</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_3.26-s_sa113"/>
+              <ptr type="semh" target="ann_words.xml#words_3.26-s_sa11a"/>
+            </seg>
+            <seg xml:id="groups_3.26-s_ga125">
+              <fs type="group">
+                <f name="orth">
+                  <string>żarliwie</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_3.26-s_sa10c"/>
+            </seg>
+            <seg xml:id="groups_3.26-s_ga122">
+              <fs type="group">
+                <f name="orth">
+                  <string>w darninę</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_3.26-s_sa114"/>
+              <ptr type="semh" target="ann_words.xml#words_3.26-s_sa11b"/>
+            </seg>
+          </s>
+          <s xml:id="groups_3.63-s" corresp="ann_words.xml#words_3.63-s">
+            <seg xml:id="groups_3.63-s_ga161">
+              <fs type="group">
+                <f name="orth">
+                  <string>rumieńce wstydu</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_3.63-s_sa14f"/>
+              <ptr type="nonhead" target="ann_words.xml#words_3.63-s_sa150"/>
+            </seg>
+            <seg xml:id="groups_3.63-s_ga15c">
+              <fs type="group">
+                <f name="orth">
+                  <string>I łzy, i nasłuchiwanie</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_3.63-s_sa138"/>
+              <ptr type="head" target="ann_words.xml#words_3.63-s_sa14b"/>
+              <ptr type="nonhead" target="ann_words.xml#words_3.63-s_sa139"/>
+              <ptr type="nonhead" target="ann_words.xml#words_3.63-s_sa14d"/>
+            </seg>
+            <seg xml:id="groups_3.63-s_ga159">
+              <fs type="group">
+                <f name="orth">
+                  <string>po nocach</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_3.63-s_sa148"/>
+              <ptr type="semh" target="ann_words.xml#words_3.63-s_sa14c"/>
+            </seg>
+            <seg xml:id="groups_3.63-s_ga15e">
+              <fs type="group">
+                <f name="orth">
+                  <string>Stenia</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_3.63-s_sa14e"/>
+            </seg>
+            <seg xml:id="groups_3.63-s_ga15f">
+              <fs type="group">
+                <f name="orth">
+                  <string>gdy</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_3.63-s_sa136"/>
+            </seg>
+            <seg xml:id="groups_3.63-s_ga15a">
+              <fs type="group">
+                <f name="orth">
+                  <string>przy wnukach</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_3.63-s_sa149"/>
+              <ptr type="semh" target="ann_words.xml#words_3.63-s_sa151"/>
+            </seg>
+            <seg xml:id="groups_3.63-s_ga160">
+              <fs type="group">
+                <f name="orth">
+                  <string>gdzież</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_3.63-s_sa137"/>
+            </seg>
+            <seg xml:id="groups_3.63-s_ga156">
+              <fs type="group">
+                <f name="orth">
+                  <string>pan zięć</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_3.63-s_sa152"/>
+              <ptr type="nonhead" target="ann_words.xml#words_3.63-s_sa153"/>
+            </seg>
+            <seg xml:id="groups_3.63-s_ga15b">
+              <fs type="group">
+                <f name="orth">
+                  <string>o panu inżynierze</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_3.63-s_sa14a"/>
+              <ptr type="semh" target="ann_words.xml#words_3.63-s_sa154"/>
+              <ptr type="nonhead" target="ann_words.xml#words_3.63-s_sa155"/>
+            </seg>
+          </s>
+        </p>
+        <p xml:id="groups_4-p" corresp="ann_words.xml#words_4-p">
+          <s xml:id="groups_4.10-s" corresp="ann_words.xml#words_4.10-s">
+            <seg xml:id="groups_4.10-s_ga171">
+              <fs type="group">
+                <f name="orth">
+                  <string>zdejmowania chusty</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_4.10-s_sa16c"/>
+              <ptr type="nonhead" target="ann_words.xml#words_4.10-s_sa16d"/>
+            </seg>
+            <seg xml:id="groups_4.10-s_ga170">
+              <fs type="group">
+                <f name="orth">
+                  <string>Prawie wesoła</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdjG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_4.10-s_sa16a"/>
+              <ptr type="head" target="ann_words.xml#words_4.10-s_sa167"/>
+            </seg>
+            <seg xml:id="groups_4.10-s_ga16f">
+              <fs type="group">
+                <f name="orth">
+                  <string>przy pomocy krokodyla</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_4.10-s_sa162"/>
+              <ptr type="semh" target="ann_words.xml#words_4.10-s_sa16b"/>
+            </seg>
+          </s>
+          <s xml:id="groups_4.22-s" corresp="ann_words.xml#words_4.22-s">
+            <seg xml:id="groups_4.22-s_ga18b">
+              <fs type="group">
+                <f name="orth">
+                  <string>ją</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_4.22-s_sa189"/>
+            </seg>
+            <seg xml:id="groups_4.22-s_ga18c">
+              <fs type="group">
+                <f name="orth">
+                  <string>tamże</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_4.22-s_sa181"/>
+            </seg>
+            <seg xml:id="groups_4.22-s_ga18d">
+              <fs type="group">
+                <f name="orth">
+                  <string>gdzie</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_4.22-s_sa182"/>
+            </seg>
+            <seg xml:id="groups_4.22-s_ga18a">
+              <fs type="group">
+                <f name="orth">
+                  <string>portrecik ojca</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_4.22-s_sa187"/>
+              <ptr type="nonhead" target="ann_words.xml#words_4.22-s_sa188"/>
+            </seg>
+          </s>
+          <s xml:id="groups_4.43-s" corresp="ann_words.xml#words_4.43-s">
+            <seg xml:id="groups_4.43-s_ga1b5">
+              <fs type="group">
+                <f name="orth">
+                  <string>Telefon</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_4.43-s_sa1ad"/>
+            </seg>
+            <seg xml:id="groups_4.43-s_ga1b7">
+              <fs type="group">
+                <f name="orth">
+                  <string>gorączkowo</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_4.43-s_sa1a3"/>
+            </seg>
+            <seg xml:id="groups_4.43-s_ga1b3">
+              <fs type="group">
+                <f name="orth">
+                  <string>oschły wyraz twarzy</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_4.43-s_sa1a2"/>
+              <ptr type="head" target="ann_words.xml#words_4.43-s_sa1ae"/>
+              <ptr type="nonhead" target="ann_words.xml#words_4.43-s_sa1af"/>
+            </seg>
+            <seg xml:id="groups_4.43-s_ga1b6">
+              <fs type="group">
+                <f name="orth">
+                  <string>może Marta</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_4.43-s_sa1ab"/>
+              <ptr type="head" target="ann_words.xml#words_4.43-s_sa1b0"/>
+            </seg>
+            <seg xml:id="groups_4.43-s_ga1b4">
+              <fs type="group">
+                <f name="orth">
+                  <string>do aparatu</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_4.43-s_sa1ac"/>
+              <ptr type="semh" target="ann_words.xml#words_4.43-s_sa1b1"/>
+            </seg>
+          </s>
+          <s xml:id="groups_4.54-s" corresp="ann_words.xml#words_4.54-s">
+            <seg xml:id="groups_4.54-s_ga1cd">
+              <fs type="group">
+                <f name="orth">
+                  <string>słuchawkę</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_4.54-s_sa1c7"/>
+            </seg>
+            <seg xml:id="groups_4.54-s_ga1ce">
+              <fs type="group">
+                <f name="orth">
+                  <string>Sabina</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_4.54-s_sa1c8"/>
+            </seg>
+            <seg xml:id="groups_4.54-s_ga1cb">
+              <fs type="group">
+                <f name="orth">
+                  <string>słoniowym truchtem</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_4.54-s_sa1c2"/>
+              <ptr type="head" target="ann_words.xml#words_4.54-s_sa1c9"/>
+            </seg>
+            <seg xml:id="groups_4.54-s_ga1cc">
+              <fs type="group">
+                <f name="orth">
+                  <string>przez korytarz</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_4.54-s_sa1c6"/>
+              <ptr type="semh" target="ann_words.xml#words_4.54-s_sa1ca"/>
+            </seg>
+          </s>
+        </p>
+        <p xml:id="groups_5-p" corresp="ann_words.xml#words_5-p">
+          <s xml:id="groups_5.3-s" corresp="ann_words.xml#words_5.3-s">
+            <seg xml:id="groups_5.3-s_ga1d6">
+              <fs type="group">
+                <f name="orth">
+                  <string>Róża</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_5.3-s_sa1d5"/>
+            </seg>
+          </s>
+          <s xml:id="groups_5.21-s" corresp="ann_words.xml#words_5.21-s">
+            <seg xml:id="groups_5.21-s_ga1f6">
+              <fs type="group">
+                <f name="orth">
+                  <string>napomnień</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_5.21-s_sa1ef"/>
+            </seg>
+            <seg xml:id="groups_5.21-s_ga1f8">
+              <fs type="group">
+                <f name="orth">
+                  <string>jak</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_5.21-s_sa1e9"/>
+            </seg>
+            <seg xml:id="groups_5.21-s_ga1f3">
+              <fs type="group">
+                <f name="orth">
+                  <string>ptasiego szczebiotu</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_5.21-s_sa1e6"/>
+              <ptr type="head" target="ann_words.xml#words_5.21-s_sa1f0"/>
+            </seg>
+            <seg xml:id="groups_5.21-s_ga1f7">
+              <fs type="group">
+                <f name="orth">
+                  <string>który</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdjG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_5.21-s_sa1e7"/>
+            </seg>
+            <seg xml:id="groups_5.21-s_ga1f5">
+              <fs type="group">
+                <f name="orth">
+                  <string>do niczego</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_5.21-s_sa1ee"/>
+              <ptr type="semh" target="ann_words.xml#words_5.21-s_sa1f1"/>
+            </seg>
+            <seg xml:id="groups_5.21-s_ga1f4">
+              <fs type="group">
+                <f name="orth">
+                  <string>nic ludzkiego</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_5.21-s_sa1f2"/>
+              <ptr type="nonhead" target="ann_words.xml#words_5.21-s_sa1e8"/>
+            </seg>
+          </s>
+          <s xml:id="groups_5.31-s" corresp="ann_words.xml#words_5.31-s">
+            <seg xml:id="groups_5.31-s_ga20d">
+              <fs type="group">
+                <f name="orth">
+                  <string>Oczy</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_5.31-s_sa206"/>
+            </seg>
+            <seg xml:id="groups_5.31-s_ga20b">
+              <fs type="group">
+                <f name="orth">
+                  <string>biaława szklistość</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_5.31-s_sa203"/>
+              <ptr type="head" target="ann_words.xml#words_5.31-s_sa207"/>
+            </seg>
+            <seg xml:id="groups_5.31-s_ga20e">
+              <fs type="group">
+                <f name="orth">
+                  <string>co</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_5.31-s_sa208"/>
+            </seg>
+            <seg xml:id="groups_5.31-s_ga20c">
+              <fs type="group">
+                <f name="orth">
+                  <string>tajemnicę spojrzenia</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_5.31-s_sa209"/>
+              <ptr type="nonhead" target="ann_words.xml#words_5.31-s_sa20a"/>
+            </seg>
+          </s>
+          <s xml:id="groups_5.52-s" corresp="ann_words.xml#words_5.52-s">
+            <seg xml:id="groups_5.52-s_ga22e">
+              <fs type="group">
+                <f name="orth">
+                  <string>po niezmiernym wysiłku</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_5.52-s_sa224"/>
+              <ptr type="nonhead" target="ann_words.xml#words_5.52-s_sa219"/>
+              <ptr type="semh" target="ann_words.xml#words_5.52-s_sa226"/>
+            </seg>
+            <seg xml:id="groups_5.52-s_ga230">
+              <fs type="group">
+                <f name="orth">
+                  <string>szczęśliwa</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdjG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_5.52-s_sa21a"/>
+            </seg>
+            <seg xml:id="groups_5.52-s_ga22f">
+              <fs type="group">
+                <f name="orth">
+                  <string>ze zdobyczy</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_5.52-s_sa225"/>
+              <ptr type="semh" target="ann_words.xml#words_5.52-s_sa227"/>
+            </seg>
+            <seg xml:id="groups_5.52-s_ga231">
+              <fs type="group">
+                <f name="orth">
+                  <string>pewna</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdjG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_5.52-s_sa21b"/>
+            </seg>
+            <seg xml:id="groups_5.52-s_ga22c">
+              <fs type="group">
+                <f name="orth">
+                  <string>własnej potęgi</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_5.52-s_sa21c"/>
+              <ptr type="head" target="ann_words.xml#words_5.52-s_sa228"/>
+            </seg>
+            <seg xml:id="groups_5.52-s_ga232">
+              <fs type="group">
+                <f name="orth">
+                  <string>wreszcie syta</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdjG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_5.52-s_sa223"/>
+              <ptr type="head" target="ann_words.xml#words_5.52-s_sa21d"/>
+            </seg>
+            <seg xml:id="groups_5.52-s_ga22d">
+              <fs type="group">
+                <f name="orth">
+                  <string>wiedzy i spokoju</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_5.52-s_sa229"/>
+              <ptr type="nonhead" target="ann_words.xml#words_5.52-s_sa21e"/>
+              <ptr type="nonhead" target="ann_words.xml#words_5.52-s_sa22a"/>
+            </seg>
+          </s>
+          <s xml:id="groups_5.61-s" corresp="ann_words.xml#words_5.61-s">
+            <seg xml:id="groups_5.61-s_ga240">
+              <fs type="group">
+                <f name="orth">
+                  <string>do córki</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_5.61-s_sa23b"/>
+              <ptr type="semh" target="ann_words.xml#words_5.61-s_sa23d"/>
+            </seg>
+            <seg xml:id="groups_5.61-s_ga241">
+              <fs type="group">
+                <f name="orth">
+                  <string>ze swej błogiej dali</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_5.61-s_sa23c"/>
+              <ptr type="nonhead" target="ann_words.xml#words_5.61-s_sa238"/>
+              <ptr type="nonhead" target="ann_words.xml#words_5.61-s_sa239"/>
+              <ptr type="semh" target="ann_words.xml#words_5.61-s_sa23e"/>
+            </seg>
+          </s>
+        </p>
+        <p xml:id="groups_6-p" corresp="ann_words.xml#words_6-p">
+          <s xml:id="groups_6.8-s" corresp="ann_words.xml#words_6.8-s">
+            <seg xml:id="groups_6.8-s_ga252">
+              <fs type="group">
+                <f name="orth">
+                  <string>Radio</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_6.8-s_sa24c"/>
+            </seg>
+            <seg xml:id="groups_6.8-s_ga251">
+              <fs type="group">
+                <f name="orth">
+                  <string>"Close your eyes"</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_6.8-s_sa249"/>
+              <ptr type="head" target="ann_words.xml#words_6.8-s_sa24d"/>
+              <ptr type="nonhead" target="ann_words.xml#words_6.8-s_sa24e"/>
+              <ptr type="nonhead" target="ann_words.xml#words_6.8-s_sa24f"/>
+              <ptr type="nonhead" target="ann_words.xml#words_6.8-s_sa24a"/>
+            </seg>
+          </s>
+          <s xml:id="groups_6.47-s" corresp="ann_words.xml#words_6.47-s">
+            <seg xml:id="groups_6.47-s_ga2a2">
+              <fs type="group">
+                <f name="orth">
+                  <string>, jest jaki dzień, jaka sytuacja.</string>
+                </f>
+                <f name="type">
+                  <symbol value="KG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_6.47-s_sa280"/>
+              <ptr type="nonhead" target="ann_words.xml#words_6.47-s_sa271"/>
+              <ptr type="nonhead" target="groups_6.47-s_ga29f"/>
+              <ptr type="nonhead" target="ann_words.xml#words_6.47-s_sa281"/>
+              <ptr type="nonhead" target="groups_6.47-s_ga295"/>
+              <ptr type="nonhead" target="ann_words.xml#words_6.47-s_sa282"/>
+            </seg>
+            <seg xml:id="groups_6.47-s_ga29f">
+              <fs type="group">
+                <f name="orth">
+                  <string>jaki dzień</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_6.47-s_sa276"/>
+              <ptr type="head" target="ann_words.xml#words_6.47-s_sa290"/>
+            </seg>
+            <seg xml:id="groups_6.47-s_ga295">
+              <fs type="group">
+                <f name="orth">
+                  <string>jaka sytuacja</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_6.47-s_sa277"/>
+              <ptr type="head" target="ann_words.xml#words_6.47-s_sa291"/>
+            </seg>
+            <seg xml:id="groups_6.47-s_ga29b">
+              <fs type="group">
+                <f name="orth">
+                  <string>Róża</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_6.47-s_sa286"/>
+            </seg>
+            <seg xml:id="groups_6.47-s_ga29c">
+              <fs type="group">
+                <f name="orth">
+                  <string>pominięciem swojej wizyty</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_6.47-s_sa287"/>
+              <ptr type="nonhead" target="ann_words.xml#words_6.47-s_sa272"/>
+              <ptr type="nonhead" target="ann_words.xml#words_6.47-s_sa289"/>
+            </seg>
+            <seg xml:id="groups_6.47-s_ga298">
+              <fs type="group">
+                <f name="orth">
+                  <string>przez córkę</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_6.47-s_sa283"/>
+              <ptr type="semh" target="ann_words.xml#words_6.47-s_sa288"/>
+            </seg>
+            <seg xml:id="groups_6.47-s_ga297">
+              <fs type="group">
+                <f name="orth">
+                  <string>brakiem szacunku</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_6.47-s_sa28a"/>
+              <ptr type="nonhead" target="ann_words.xml#words_6.47-s_sa28b"/>
+            </seg>
+            <seg xml:id="groups_6.47-s_ga2a1">
+              <fs type="group">
+                <f name="orth">
+                  <string>tutaj</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_6.47-s_sa278"/>
+            </seg>
+            <seg xml:id="groups_6.47-s_ga299">
+              <fs type="group">
+                <f name="orth">
+                  <string>w tym zięciowskim domu</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_6.47-s_sa284"/>
+              <ptr type="nonhead" target="ann_words.xml#words_6.47-s_sa273"/>
+              <ptr type="nonhead" target="ann_words.xml#words_6.47-s_sa274"/>
+              <ptr type="semh" target="ann_words.xml#words_6.47-s_sa28c"/>
+            </seg>
+            <seg xml:id="groups_6.47-s_ga29a">
+              <fs type="group">
+                <f name="orth">
+                  <string>dla empirowego stolika</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_6.47-s_sa285"/>
+              <ptr type="nonhead" target="ann_words.xml#words_6.47-s_sa275"/>
+              <ptr type="semh" target="ann_words.xml#words_6.47-s_sa28d"/>
+            </seg>
+            <seg xml:id="groups_6.47-s_ga29d">
+              <fs type="group">
+                <f name="orth">
+                  <string>gniewem</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_6.47-s_sa28e"/>
+            </seg>
+            <seg xml:id="groups_6.47-s_ga29e">
+              <fs type="group">
+                <f name="orth">
+                  <string>pieśń</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_6.47-s_sa28f"/>
+            </seg>
+          </s>
+          <s xml:id="groups_6.61-s" corresp="ann_words.xml#words_6.61-s">
+            <seg xml:id="groups_6.61-s_ga2b9">
+              <fs type="group">
+                <f name="orth">
+                  <string>w lustro</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_6.61-s_sa2b1"/>
+              <ptr type="semh" target="ann_words.xml#words_6.61-s_sa2b4"/>
+            </seg>
+            <seg xml:id="groups_6.61-s_ga2bb">
+              <fs type="group">
+                <f name="orth">
+                  <string>na sobie</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNGp"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_6.61-s_sa2b2"/>
+              <ptr type="semh" target="ann_words.xml#words_6.61-s_sa2b7"/>
+            </seg>
+            <seg xml:id="groups_6.61-s_ga2bc">
+              <fs type="group">
+                <f name="orth">
+                  <string>sweter</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_6.61-s_sa2b5"/>
+            </seg>
+            <seg xml:id="groups_6.61-s_ga2ba">
+              <fs type="group">
+                <f name="orth">
+                  <string>w czerwone skrzydła</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_6.61-s_sa2b3"/>
+              <ptr type="nonhead" target="ann_words.xml#words_6.61-s_sa2af"/>
+              <ptr type="semh" target="ann_words.xml#words_6.61-s_sa2b6"/>
+            </seg>
+          </s>
+        </p>
+        <p xml:id="groups_7-p" corresp="ann_words.xml#words_7-p">
+          <s xml:id="groups_7.15-s" corresp="ann_words.xml#words_7.15-s">
+            <seg xml:id="groups_7.15-s_ga2d7">
+              <fs type="group">
+                <f name="orth">
+                  <string>Marta</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_7.15-s_sa2d1"/>
+            </seg>
+            <seg xml:id="groups_7.15-s_ga2d8">
+              <fs type="group">
+                <f name="orth">
+                  <string>telefon</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_7.15-s_sa2d2"/>
+            </seg>
+            <seg xml:id="groups_7.15-s_ga2d5">
+              <fs type="group">
+                <f name="orth">
+                  <string>na progu</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_7.15-s_sa2cf"/>
+              <ptr type="semh" target="ann_words.xml#words_7.15-s_sa2d3"/>
+            </seg>
+            <seg xml:id="groups_7.15-s_ga2d9">
+              <fs type="group">
+                <f name="orth">
+                  <string>twarzą w twarz</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_7.15-s_sa2c0"/>
+            </seg>
+            <seg xml:id="groups_7.15-s_ga2d6">
+              <fs type="group">
+                <f name="orth">
+                  <string>z matką</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_7.15-s_sa2d0"/>
+              <ptr type="semh" target="ann_words.xml#words_7.15-s_sa2d4"/>
+            </seg>
+          </s>
+          <s xml:id="groups_7.28-s" corresp="ann_words.xml#words_7.28-s">
+            <seg xml:id="groups_7.28-s_ga2f2">
+              <fs type="group">
+                <f name="orth">
+                  <string>Róża</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_7.28-s_sa2eb"/>
+            </seg>
+            <seg xml:id="groups_7.28-s_ga2f3">
+              <fs type="group">
+                <f name="orth">
+                  <string>wysoko</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_7.28-s_sa2e5"/>
+            </seg>
+            <seg xml:id="groups_7.28-s_ga2f1">
+              <fs type="group">
+                <f name="orth">
+                  <string>przed siebie</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNGp"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_7.28-s_sa2e9"/>
+              <ptr type="semh" target="ann_words.xml#words_7.28-s_sa2ee"/>
+            </seg>
+            <seg xml:id="groups_7.28-s_ga2ef">
+              <fs type="group">
+                <f name="orth">
+                  <string>nad miarę otwartymi oczami</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_7.28-s_sa2ec"/>
+              <ptr type="nonhead" target="ann_words.xml#words_7.28-s_sa2e4"/>
+              <ptr type="head" target="ann_words.xml#words_7.28-s_sa2ed"/>
+            </seg>
+          </s>
+          <s xml:id="groups_7.36-s" corresp="ann_words.xml#words_7.36-s">
+            <seg xml:id="groups_7.36-s_ga301">
+              <fs type="group">
+                <f name="orth">
+                  <string>W tych oczach</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_7.36-s_sa2fc"/>
+              <ptr type="nonhead" target="ann_words.xml#words_7.36-s_sa2f9"/>
+              <ptr type="semh" target="ann_words.xml#words_7.36-s_sa2fd"/>
+            </seg>
+            <seg xml:id="groups_7.36-s_ga300">
+              <fs type="group">
+                <f name="orth">
+                  <string>widok nietutejszy</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_7.36-s_sa2fe"/>
+              <ptr type="nonhead" target="ann_words.xml#words_7.36-s_sa2fa"/>
+            </seg>
+          </s>
+          <s xml:id="groups_7.59-s" corresp="ann_words.xml#words_7.59-s">
+            <seg xml:id="groups_7.59-s_ga330">
+              <fs type="group">
+                <f name="orth">
+                  <string>Źrenice</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_7.59-s_sa324"/>
+            </seg>
+            <seg xml:id="groups_7.59-s_ga331">
+              <fs type="group">
+                <f name="orth">
+                  <string>go</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_7.59-s_sa329"/>
+            </seg>
+            <seg xml:id="groups_7.59-s_ga32f">
+              <fs type="group">
+                <f name="orth">
+                  <string>w całej jego dzikiej wielkości</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_7.59-s_sa322"/>
+              <ptr type="nonhead" target="ann_words.xml#words_7.59-s_sa31b"/>
+              <ptr type="nonhead" target="ann_words.xml#words_7.59-s_sa32a"/>
+              <ptr type="nonhead" target="ann_words.xml#words_7.59-s_sa31c"/>
+              <ptr type="semh" target="ann_words.xml#words_7.59-s_sa325"/>
+            </seg>
+            <seg xml:id="groups_7.59-s_ga333">
+              <fs type="group">
+                <f name="orth">
+                  <string>ciągle</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_7.59-s_sa31e"/>
+            </seg>
+            <seg xml:id="groups_7.59-s_ga332">
+              <fs type="group">
+                <f name="orth">
+                  <string>Marta</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_7.59-s_sa326"/>
+            </seg>
+            <seg xml:id="groups_7.59-s_ga32e">
+              <fs type="group">
+                <f name="orth">
+                  <string>w smudze nieziemskiego widzenia</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_7.59-s_sa323"/>
+              <ptr type="semh" target="ann_words.xml#words_7.59-s_sa327"/>
+              <ptr type="nonhead" target="ann_words.xml#words_7.59-s_sa31d"/>
+              <ptr type="nonhead" target="ann_words.xml#words_7.59-s_sa328"/>
+            </seg>
+          </s>
+          <s xml:id="groups_7.63-s" corresp="ann_words.xml#words_7.63-s"/>
+          <s xml:id="groups_7.80-s" corresp="ann_words.xml#words_7.80-s">
+            <seg xml:id="groups_7.80-s_ga35c">
+              <fs type="group">
+                <f name="orth">
+                  <string>ramionami</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_7.80-s_sa354"/>
+            </seg>
+            <seg xml:id="groups_7.80-s_ga360">
+              <fs type="group">
+                <f name="orth">
+                  <string>duże</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdjG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_7.80-s_sa34c"/>
+            </seg>
+            <seg xml:id="groups_7.80-s_ga35a">
+              <fs type="group">
+                <f name="orth">
+                  <string>ciepłe ciało</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_7.80-s_sa34d"/>
+              <ptr type="head" target="ann_words.xml#words_7.80-s_sa355"/>
+            </seg>
+            <seg xml:id="groups_7.80-s_ga35d">
+              <fs type="group">
+                <f name="orth">
+                  <string>głowę</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_7.80-s_sa356"/>
+            </seg>
+            <seg xml:id="groups_7.80-s_ga35b">
+              <fs type="group">
+                <f name="orth">
+                  <string>do łona</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_7.80-s_sa353"/>
+              <ptr type="semh" target="ann_words.xml#words_7.80-s_sa357"/>
+            </seg>
+            <seg xml:id="groups_7.80-s_ga361">
+              <fs type="group">
+                <f name="orth">
+                  <string>które</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdjG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_7.80-s_sa34e"/>
+            </seg>
+            <seg xml:id="groups_7.80-s_ga35e">
+              <fs type="group">
+                <f name="orth">
+                  <string>ją</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_7.80-s_sa359"/>
+            </seg>
+            <seg xml:id="groups_7.80-s_ga35f">
+              <fs type="group">
+                <f name="orth">
+                  <string>światu</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_7.80-s_sa358"/>
+            </seg>
+          </s>
+        </p>
+        <p xml:id="groups_8-p" corresp="ann_words.xml#words_8-p">
+          <s xml:id="groups_8.10-s" corresp="ann_words.xml#words_8.10-s">
+            <seg xml:id="groups_8.10-s_ga371">
+              <fs type="group">
+                <f name="orth">
+                  <string>W okresie szkolnym</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_8.10-s_sa36b"/>
+              <ptr type="semh" target="ann_words.xml#words_8.10-s_sa36c"/>
+              <ptr type="nonhead" target="ann_words.xml#words_8.10-s_sa367"/>
+            </seg>
+            <seg xml:id="groups_8.10-s_ga372">
+              <fs type="group">
+                <f name="orth">
+                  <string>nie inaczej</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_8.10-s_sa36a"/>
+              <ptr type="head" target="ann_words.xml#words_8.10-s_sa368"/>
+            </seg>
+            <seg xml:id="groups_8.10-s_ga370">
+              <fs type="group">
+                <f name="orth">
+                  <string>sprawa koleżanek</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_8.10-s_sa36d"/>
+              <ptr type="nonhead" target="ann_words.xml#words_8.10-s_sa36e"/>
+            </seg>
+          </s>
+          <s xml:id="groups_8.17-s" corresp="ann_words.xml#words_8.17-s">
+            <seg xml:id="groups_8.17-s_ga383">
+              <fs type="group">
+                <f name="orth">
+                  <string>do roku</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_8.17-s_sa37f"/>
+            </seg>
+            <seg xml:id="groups_8.17-s_ga381">
+              <fs type="group">
+                <f name="orth">
+                  <string>Raz tylko</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_8.17-s_sa37e"/>
+              <ptr type="nonhead" target="ann_words.xml#words_8.17-s_sa37c"/>
+            </seg>
+          </s>
+          <s xml:id="groups_8.24-s" corresp="ann_words.xml#words_8.24-s">
+            <seg xml:id="groups_8.24-s_ga38f">
+              <fs type="group">
+                <f name="orth">
+                  <string>Róża</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_8.24-s_sa38b"/>
+            </seg>
+            <seg xml:id="groups_8.24-s_ga390">
+              <fs type="group">
+                <f name="orth">
+                  <string>wtedy</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_8.24-s_sa388"/>
+            </seg>
+            <seg xml:id="groups_8.24-s_ga38e">
+              <fs type="group">
+                <f name="orth">
+                  <string>ze wspaniałym przyjęciem</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_8.24-s_sa38a"/>
+              <ptr type="nonhead" target="ann_words.xml#words_8.24-s_sa387"/>
+              <ptr type="semh" target="ann_words.xml#words_8.24-s_sa38c"/>
+            </seg>
+          </s>
+          <s xml:id="groups_8.45-s" corresp="ann_words.xml#words_8.45-s">
+            <seg xml:id="groups_8.45-s_ga3b8">
+              <fs type="group">
+                <f name="orth">
+                  <string>Stół</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_8.45-s_sa3ae"/>
+            </seg>
+            <seg xml:id="groups_8.45-s_ga3b6">
+              <fs type="group">
+                <f name="orth">
+                  <string>pod tortami</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_8.45-s_sa3ac"/>
+              <ptr type="semh" target="ann_words.xml#words_8.45-s_sa3af"/>
+            </seg>
+            <seg xml:id="groups_8.45-s_ga3b9">
+              <fs type="group">
+                <f name="orth">
+                  <string>owocami</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_8.45-s_sa3b0"/>
+            </seg>
+            <seg xml:id="groups_8.45-s_ga3ba">
+              <fs type="group">
+                <f name="orth">
+                  <string>kremami</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_8.45-s_sa3b1"/>
+            </seg>
+            <seg xml:id="groups_8.45-s_ga3b7">
+              <fs type="group">
+                <f name="orth">
+                  <string>z mebli</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_8.45-s_sa3ad"/>
+              <ptr type="semh" target="ann_words.xml#words_8.45-s_sa3b2"/>
+            </seg>
+            <seg xml:id="groups_8.45-s_ga3bb">
+              <fs type="group">
+                <f name="orth">
+                  <string>pokrowce</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_8.45-s_sa3b3"/>
+            </seg>
+            <seg xml:id="groups_8.45-s_ga3bc">
+              <fs type="group">
+                <f name="orth">
+                  <string>srebra</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_8.45-s_sa3b4"/>
+            </seg>
+            <seg xml:id="groups_8.45-s_ga3bd">
+              <fs type="group">
+                <f name="orth">
+                  <string>posadzki</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_8.45-s_sa3b5"/>
+            </seg>
+          </s>
+          <s xml:id="groups_8.51-s" corresp="ann_words.xml#words_8.51-s">
+            <seg xml:id="groups_8.51-s_ga3ca">
+              <fs type="group">
+                <f name="orth">
+                  <string>Program zabawy</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_8.51-s_sa3c8"/>
+              <ptr type="nonhead" target="ann_words.xml#words_8.51-s_sa3c9"/>
+            </seg>
+            <seg xml:id="groups_8.51-s_ga3cb">
+              <fs type="group">
+                <f name="orth">
+                  <string>ściśle</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_8.51-s_sa3c6"/>
+            </seg>
+          </s>
+          <s xml:id="groups_8.84-s" corresp="ann_words.xml#words_8.84-s">
+            <seg xml:id="groups_8.84-s_ga409">
+              <fs type="group">
+                <f name="orth">
+                  <string>Zazwyczaj</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_8.84-s_sa3ea"/>
+            </seg>
+            <seg xml:id="groups_8.84-s_ga3ff">
+              <fs type="group">
+                <f name="orth">
+                  <string>latarnia czarnoksięska</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_8.84-s_sa3f5"/>
+              <ptr type="nonhead" target="ann_words.xml#words_8.84-s_sa3e9"/>
+            </seg>
+            <seg xml:id="groups_8.84-s_ga402">
+              <fs type="group">
+                <f name="orth">
+                  <string>gros czasu</string>
+                </f>
+                <f name="type">
+                  <symbol value="NumGr"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_8.84-s_sa3fe"/>
+              <ptr type="semh" target="ann_words.xml#words_8.84-s_sa3f6"/>
+            </seg>
+            <seg xml:id="groups_8.84-s_ga40a">
+              <fs type="group">
+                <f name="orth">
+                  <string>później</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_8.84-s_sa3eb"/>
+            </seg>
+            <seg xml:id="groups_8.84-s_ga40b">
+              <fs type="group">
+                <f name="orth">
+                  <string>kolejno</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_8.84-s_sa3ec"/>
+            </seg>
+            <seg xml:id="groups_8.84-s_ga404">
+              <fs type="group">
+                <f name="orth">
+                  <string>wiersze</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_8.84-s_sa3f7"/>
+            </seg>
+            <seg xml:id="groups_8.84-s_ga405">
+              <fs type="group">
+                <f name="orth">
+                  <string>godzinę</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_8.84-s_sa3f8"/>
+            </seg>
+            <seg xml:id="groups_8.84-s_ga400">
+              <fs type="group">
+                <f name="orth">
+                  <string>"talar" i "pierścionek"</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_8.84-s_sa3d5"/>
+              <ptr type="nonhead" target="ann_words.xml#words_8.84-s_sa3ed"/>
+              <ptr type="nonhead" target="ann_words.xml#words_8.84-s_sa3d6"/>
+            </seg>
+            <seg xml:id="groups_8.84-s_ga406">
+              <fs type="group">
+                <f name="orth">
+                  <string>godzinę</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_8.84-s_sa3f9"/>
+            </seg>
+            <seg xml:id="groups_8.84-s_ga407">
+              <fs type="group">
+                <f name="orth">
+                  <string>tańce</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_8.84-s_sa3fa"/>
+            </seg>
+            <seg xml:id="groups_8.84-s_ga408">
+              <fs type="group">
+                <f name="orth">
+                  <string>grą</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_8.84-s_sa3fb"/>
+            </seg>
+            <seg xml:id="groups_8.84-s_ga403">
+              <fs type="group">
+                <f name="orth">
+                  <string>w szarady i lemoniadę</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_8.84-s_sa3f4"/>
+              <ptr type="semh" target="ann_words.xml#words_8.84-s_sa3fc"/>
+              <ptr type="nonhead" target="ann_words.xml#words_8.84-s_sa3ee"/>
+              <ptr type="nonhead" target="ann_words.xml#words_8.84-s_sa3fd"/>
+            </seg>
+          </s>
+          <s xml:id="groups_8.90-s" corresp="ann_words.xml#words_8.90-s">
+            <seg xml:id="groups_8.90-s_ga415">
+              <fs type="group">
+                <f name="orth">
+                  <string>O ósmej wieczór</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNGgodz"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_8.90-s_sa412"/>
+              <ptr type="semh" target="ann_words.xml#words_8.90-s_sa410"/>
+              <ptr type="nonhead" target="ann_words.xml#words_8.90-s_sa413"/>
+            </seg>
+            <seg xml:id="groups_8.90-s_ga417">
+              <fs type="group">
+                <f name="orth">
+                  <string>gości</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_8.90-s_sa414"/>
+            </seg>
+          </s>
+        </p>
+        <p xml:id="groups_9-p" corresp="ann_words.xml#words_9-p">
+          <s xml:id="groups_9.17-s" corresp="ann_words.xml#words_9.17-s">
+            <seg xml:id="groups_9.17-s_ga438">
+              <fs type="group">
+                <f name="orth">
+                  <string>jej</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_9.17-s_sa430"/>
+            </seg>
+            <seg xml:id="groups_9.17-s_ga434">
+              <fs type="group">
+                <f name="orth">
+                  <string>Ewa</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_9.17-s_sa42b"/>
+            </seg>
+            <seg xml:id="groups_9.17-s_ga435">
+              <fs type="group">
+                <f name="orth">
+                  <string>Éveline</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_9.17-s_sa42c"/>
+            </seg>
+            <seg xml:id="groups_9.17-s_ga436">
+              <fs type="group">
+                <f name="orth">
+                  <string>imię</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_9.17-s_sa42d"/>
+            </seg>
+            <seg xml:id="groups_9.17-s_ga437">
+              <fs type="group">
+                <f name="orth">
+                  <string>które</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdjG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_9.17-s_sa423"/>
+            </seg>
+            <seg xml:id="groups_9.17-s_ga431">
+              <fs type="group">
+                <f name="orth">
+                  <string>Luiza</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_9.17-s_sa42e"/>
+            </seg>
+            <seg xml:id="groups_9.17-s_ga433">
+              <fs type="group">
+                <f name="orth">
+                  <string>dla względów prestiżowych</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_9.17-s_sa42a"/>
+              <ptr type="semh" target="ann_words.xml#words_9.17-s_sa42f"/>
+              <ptr type="nonhead" target="ann_words.xml#words_9.17-s_sa424"/>
+            </seg>
+          </s>
+          <s xml:id="groups_9.23-s" corresp="ann_words.xml#words_9.23-s">
+            <seg xml:id="groups_9.23-s_ga443">
+              <fs type="group">
+                <f name="orth">
+                  <string>Róża</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_9.23-s_sa440"/>
+            </seg>
+            <seg xml:id="groups_9.23-s_ga444">
+              <fs type="group">
+                <f name="orth">
+                  <string>dobrze</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_9.23-s_sa43e"/>
+            </seg>
+            <seg xml:id="groups_9.23-s_ga442">
+              <fs type="group">
+                <f name="orth">
+                  <string>ten dzień</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_9.23-s_sa43d"/>
+              <ptr type="head" target="ann_words.xml#words_9.23-s_sa441"/>
+            </seg>
+          </s>
+          <s xml:id="groups_9.47-s" corresp="ann_words.xml#words_9.47-s">
+            <seg xml:id="groups_9.47-s_ga46e">
+              <fs type="group">
+                <f name="orth">
+                  <string>Jesienią</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_9.47-s_sa44c"/>
+            </seg>
+            <seg xml:id="groups_9.47-s_ga468">
+              <fs type="group">
+                <f name="orth">
+                  <string>w niedzielę</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_9.47-s_sa45a"/>
+              <ptr type="semh" target="ann_words.xml#words_9.47-s_sa45e"/>
+            </seg>
+            <seg xml:id="groups_9.47-s_ga469">
+              <fs type="group">
+                <f name="orth">
+                  <string>z ciotką</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_9.47-s_sa45b"/>
+              <ptr type="semh" target="ann_words.xml#words_9.47-s_sa45f"/>
+            </seg>
+            <seg xml:id="groups_9.47-s_ga46a">
+              <fs type="group">
+                <f name="orth">
+                  <string>na obrzędowy spacer</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_9.47-s_sa45c"/>
+              <ptr type="nonhead" target="ann_words.xml#words_9.47-s_sa452"/>
+              <ptr type="semh" target="ann_words.xml#words_9.47-s_sa460"/>
+            </seg>
+            <seg xml:id="groups_9.47-s_ga46b">
+              <fs type="group">
+                <f name="orth">
+                  <string>do Łazienek</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_9.47-s_sa45d"/>
+              <ptr type="semh" target="ann_words.xml#words_9.47-s_sa461"/>
+            </seg>
+            <seg xml:id="groups_9.47-s_ga466">
+              <fs type="group">
+                <f name="orth">
+                  <string>placem Wareckim</string>
+                </f>
+                <f name="type">
+                  <symbol value="NGadres"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_9.47-s_sa462"/>
+              <ptr type="nonhead" target="ann_words.xml#words_9.47-s_sa453"/>
+            </seg>
+            <seg xml:id="groups_9.47-s_ga467">
+              <fs type="group">
+                <f name="orth">
+                  <string>ulicą Szpitalną</string>
+                </f>
+                <f name="type">
+                  <symbol value="NGadres"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_9.47-s_sa463"/>
+              <ptr type="nonhead" target="ann_words.xml#words_9.47-s_sa454"/>
+            </seg>
+            <seg xml:id="groups_9.47-s_ga46d">
+              <fs type="group">
+                <f name="orth">
+                  <string>Bracką</string>
+                </f>
+                <f name="type">
+                  <symbol value="NGadres"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_9.47-s_sa455"/>
+            </seg>
+            <seg xml:id="groups_9.47-s_ga46c">
+              <fs type="group">
+                <f name="orth">
+                  <string>Alejami</string>
+                </f>
+                <f name="type">
+                  <symbol value="NGadres"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_9.47-s_sa464"/>
+            </seg>
+          </s>
+          <s xml:id="groups_9.55-s" corresp="ann_words.xml#words_9.55-s">
+            <seg xml:id="groups_9.55-s_ga47c">
+              <fs type="group">
+                <f name="orth">
+                  <string>Dorożki i kabriolety</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_9.55-s_sa478"/>
+              <ptr type="nonhead" target="ann_words.xml#words_9.55-s_sa475"/>
+              <ptr type="nonhead" target="ann_words.xml#words_9.55-s_sa479"/>
+            </seg>
+            <seg xml:id="groups_9.55-s_ga47d">
+              <fs type="group">
+                <f name="orth">
+                  <string>po wyboistym bruku</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_9.55-s_sa477"/>
+              <ptr type="nonhead" target="ann_words.xml#words_9.55-s_sa474"/>
+              <ptr type="semh" target="ann_words.xml#words_9.55-s_sa47a"/>
+            </seg>
+          </s>
+          <s xml:id="groups_9.76-s" corresp="ann_words.xml#words_9.76-s">
+            <seg xml:id="groups_9.76-s_ga49e">
+              <fs type="group">
+                <f name="orth">
+                  <string>W pojazdach</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_9.76-s_sa491"/>
+              <ptr type="semh" target="ann_words.xml#words_9.76-s_sa495"/>
+            </seg>
+            <seg xml:id="groups_9.76-s_ga49d">
+              <fs type="group">
+                <f name="orth">
+                  <string>damy i dziewczynki</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_9.76-s_sa496"/>
+              <ptr type="nonhead" target="ann_words.xml#words_9.76-s_sa48c"/>
+              <ptr type="nonhead" target="ann_words.xml#words_9.76-s_sa497"/>
+            </seg>
+            <seg xml:id="groups_9.76-s_ga49f">
+              <fs type="group">
+                <f name="orth">
+                  <string>od krochmalu</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_9.76-s_sa492"/>
+              <ptr type="semh" target="ann_words.xml#words_9.76-s_sa498"/>
+            </seg>
+            <seg xml:id="groups_9.76-s_ga4a0">
+              <fs type="group">
+                <f name="orth">
+                  <string>od jedwabiu liberty</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_9.76-s_sa493"/>
+              <ptr type="semh" target="ann_words.xml#words_9.76-s_sa499"/>
+              <ptr type="nonhead" target="ann_words.xml#words_9.76-s_sa489"/>
+            </seg>
+            <seg xml:id="groups_9.76-s_ga4a1">
+              <fs type="group">
+                <f name="orth">
+                  <string>od ostrowłosej sztywnej wełny</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_9.76-s_sa494"/>
+              <ptr type="nonhead" target="ann_words.xml#words_9.76-s_sa48a"/>
+              <ptr type="nonhead" target="ann_words.xml#words_9.76-s_sa48b"/>
+              <ptr type="semh" target="ann_words.xml#words_9.76-s_sa49a"/>
+            </seg>
+          </s>
+          <s xml:id="groups_9.88-s" corresp="ann_words.xml#words_9.88-s">
+            <seg xml:id="groups_9.88-s_ga4b6">
+              <fs type="group">
+                <f name="orth">
+                  <string>Panowie</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_9.88-s_sa4ad"/>
+            </seg>
+            <seg xml:id="groups_9.88-s_ga4b3">
+              <fs type="group">
+                <f name="orth">
+                  <string>w cylindrach</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_9.88-s_sa4aa"/>
+              <ptr type="semh" target="ann_words.xml#words_9.88-s_sa4ae"/>
+            </seg>
+            <seg xml:id="groups_9.88-s_ga4b4">
+              <fs type="group">
+                <f name="orth">
+                  <string>w melonikach</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_9.88-s_sa4ab"/>
+              <ptr type="semh" target="ann_words.xml#words_9.88-s_sa4af"/>
+            </seg>
+            <seg xml:id="groups_9.88-s_ga4b7">
+              <fs type="group">
+                <f name="orth">
+                  <string>bokiem</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_9.88-s_sa4b0"/>
+            </seg>
+            <seg xml:id="groups_9.88-s_ga4b5">
+              <fs type="group">
+                <f name="orth">
+                  <string>na przednich ławeczkach</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_9.88-s_sa4ac"/>
+              <ptr type="nonhead" target="ann_words.xml#words_9.88-s_sa4a7"/>
+              <ptr type="semh" target="ann_words.xml#words_9.88-s_sa4b1"/>
+            </seg>
+          </s>
+        </p>
+        <p xml:id="groups_10-p" corresp="ann_words.xml#words_10-p">
+          <s xml:id="groups_10.5-s" corresp="ann_words.xml#words_10.5-s">
+            <seg xml:id="groups_10.5-s_ga4c3">
+              <fs type="group">
+                <f name="orth">
+                  <string>Wówczas</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_10.5-s_sa4bd"/>
+            </seg>
+            <seg xml:id="groups_10.5-s_ga4c1">
+              <fs type="group">
+                <f name="orth">
+                  <string>Martę</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_10.5-s_sa4bf"/>
+            </seg>
+            <seg xml:id="groups_10.5-s_ga4c2">
+              <fs type="group">
+                <f name="orth">
+                  <string>strach</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_10.5-s_sa4c0"/>
+            </seg>
+          </s>
+          <s xml:id="groups_10.8-s" corresp="ann_words.xml#words_10.8-s">
+            <seg xml:id="groups_10.8-s_ga4c9">
+              <fs type="group">
+                <f name="orth">
+                  <string>Jak</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_10.8-s_sa4c5"/>
+            </seg>
+            <seg xml:id="groups_10.8-s_ga4c8">
+              <fs type="group">
+                <f name="orth">
+                  <string>to</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_10.8-s_sa4c7"/>
+            </seg>
+          </s>
+          <s xml:id="groups_10.17-s" corresp="ann_words.xml#words_10.17-s">
+            <seg xml:id="groups_10.17-s_ga4da">
+              <fs type="group">
+                <f name="orth">
+                  <string>śpiew córki</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_10.17-s_sa4d5"/>
+              <ptr type="nonhead" target="ann_words.xml#words_10.17-s_sa4d6"/>
+            </seg>
+            <seg xml:id="groups_10.17-s_ga4db">
+              <fs type="group">
+                <f name="orth">
+                  <string>własną sprawą Róży</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_10.17-s_sa4d2"/>
+              <ptr type="head" target="ann_words.xml#words_10.17-s_sa4d7"/>
+              <ptr type="nonhead" target="ann_words.xml#words_10.17-s_sa4d8"/>
+            </seg>
+          </s>
+          <s xml:id="groups_10.24-s" corresp="ann_words.xml#words_10.24-s">
+            <seg xml:id="groups_10.24-s_ga4e6">
+              <fs type="group">
+                <f name="orth">
+                  <string>jakieś inne sprawy</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_10.24-s_sa4e1"/>
+              <ptr type="nonhead" target="ann_words.xml#words_10.24-s_sa4e2"/>
+              <ptr type="head" target="ann_words.xml#words_10.24-s_sa4e5"/>
+            </seg>
+          </s>
+          <s xml:id="groups_10.67-s" corresp="ann_words.xml#words_10.67-s">
+            <seg xml:id="groups_10.67-s_ga52b">
+              <fs type="group">
+                <f name="orth">
+                  <string>Prawda</string>
+                </f>
+                <f name="type">
+                  <symbol value="DisG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_10.67-s_sa51f"/>
+            </seg>
+            <seg xml:id="groups_10.67-s_ga52e">
+              <fs type="group">
+                <f name="orth">
+                  <string>codzienny</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdjG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_10.67-s_sa508"/>
+            </seg>
+            <seg xml:id="groups_10.67-s_ga526">
+              <fs type="group">
+                <f name="orth">
+                  <string>nieubłagany przymus</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_10.67-s_sa509"/>
+              <ptr type="head" target="ann_words.xml#words_10.67-s_sa520"/>
+            </seg>
+            <seg xml:id="groups_10.67-s_ga52f">
+              <fs type="group">
+                <f name="orth">
+                  <string>stąd</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_10.67-s_sa50e"/>
+            </seg>
+            <seg xml:id="groups_10.67-s_ga530">
+              <fs type="group">
+                <f name="orth">
+                  <string>dotąd</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_10.67-s_sa50f"/>
+            </seg>
+            <seg xml:id="groups_10.67-s_ga531">
+              <fs type="group">
+                <f name="orth">
+                  <string>stąd</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_10.67-s_sa510"/>
+            </seg>
+            <seg xml:id="groups_10.67-s_ga532">
+              <fs type="group">
+                <f name="orth">
+                  <string>dotąd</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_10.67-s_sa511"/>
+            </seg>
+            <seg xml:id="groups_10.67-s_ga52a">
+              <fs type="group">
+                <f name="orth">
+                  <string>o małą</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepAdjG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_10.67-s_sa51e"/>
+              <ptr type="semh" target="ann_words.xml#words_10.67-s_sa50c"/>
+            </seg>
+            <seg xml:id="groups_10.67-s_ga529">
+              <fs type="group">
+                <f name="orth">
+                  <string>bezwolną dziewczynę</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_10.67-s_sa50d"/>
+              <ptr type="head" target="ann_words.xml#words_10.67-s_sa523"/>
+            </seg>
+            <seg xml:id="groups_10.67-s_ga534">
+              <fs type="group">
+                <f name="orth">
+                  <string>, żeby następnym razem nie powtórzył się ten błąd</string>
+                </f>
+                <f name="type">
+                  <symbol value="CG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_10.67-s_sa518"/>
+              <ptr type="synh" target="ann_words.xml#words_10.67-s_sa512"/>
+              <ptr type="nonhead" target="groups_10.67-s_ga527"/>
+              <ptr type="semh" target="ann_words.xml#words_10.67-s_sa502"/>
+              <ptr type="nonhead" target="groups_10.67-s_ga528"/>
+            </seg>
+            <seg xml:id="groups_10.67-s_ga527">
+              <fs type="group">
+                <f name="orth">
+                  <string>następnym razem</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_10.67-s_sa50a"/>
+              <ptr type="head" target="ann_words.xml#words_10.67-s_sa521"/>
+            </seg>
+            <seg xml:id="groups_10.67-s_ga528">
+              <fs type="group">
+                <f name="orth">
+                  <string>ten błąd</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_10.67-s_sa50b"/>
+              <ptr type="head" target="ann_words.xml#words_10.67-s_sa522"/>
+            </seg>
+            <seg xml:id="groups_10.67-s_ga52c">
+              <fs type="group">
+                <f name="orth">
+                  <string>to</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_10.67-s_sa524"/>
+            </seg>
+            <seg xml:id="groups_10.67-s_ga52d">
+              <fs type="group">
+                <f name="orth">
+                  <string>Marcie</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_10.67-s_sa525"/>
+            </seg>
+            <seg xml:id="groups_10.67-s_ga533">
+              <fs type="group">
+                <f name="orth">
+                  <string>do żywego</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_10.67-s_sa4f0"/>
+            </seg>
+          </s>
+          <s xml:id="groups_10.84-s" corresp="ann_words.xml#words_10.84-s">
+            <seg xml:id="groups_10.84-s_ga54e">
+              <fs type="group">
+                <f name="orth">
+                  <string>mimo wszystkie bunty</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_10.84-s_sa545"/>
+              <ptr type="nonhead" target="ann_words.xml#words_10.84-s_sa53d"/>
+              <ptr type="semh" target="ann_words.xml#words_10.84-s_sa547"/>
+            </seg>
+            <seg xml:id="groups_10.84-s_ga550">
+              <fs type="group">
+                <f name="orth">
+                  <string>niczego</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_10.84-s_sa548"/>
+            </seg>
+            <seg xml:id="groups_10.84-s_ga551">
+              <fs type="group">
+                <f name="orth">
+                  <string>tak</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_10.84-s_sa540"/>
+            </seg>
+            <seg xml:id="groups_10.84-s_ga552">
+              <fs type="group">
+                <f name="orth">
+                  <string>jak</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_10.84-s_sa541"/>
+            </seg>
+            <seg xml:id="groups_10.84-s_ga54d">
+              <fs type="group">
+                <f name="orth">
+                  <string>matkę szczęśliwą</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_10.84-s_sa549"/>
+              <ptr type="nonhead" target="ann_words.xml#words_10.84-s_sa53e"/>
+            </seg>
+            <seg xml:id="groups_10.84-s_ga54f">
+              <fs type="group">
+                <f name="orth">
+                  <string>ze swojej przyczyny</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_10.84-s_sa546"/>
+              <ptr type="nonhead" target="ann_words.xml#words_10.84-s_sa53f"/>
+              <ptr type="semh" target="ann_words.xml#words_10.84-s_sa54a"/>
+            </seg>
+          </s>
+        </p>
+        <p xml:id="groups_11-p" corresp="ann_words.xml#words_11-p">
+          <s xml:id="groups_11.11-s" corresp="ann_words.xml#words_11.11-s">
+            <seg xml:id="groups_11.11-s_ga567">
+              <fs type="group">
+                <f name="orth">
+                  <string>Marta</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_11.11-s_sa561"/>
+            </seg>
+            <seg xml:id="groups_11.11-s_ga568">
+              <fs type="group">
+                <f name="orth">
+                  <string>nuty</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_11.11-s_sa562"/>
+            </seg>
+            <seg xml:id="groups_11.11-s_ga565">
+              <fs type="group">
+                <f name="orth">
+                  <string>z trzaskiem</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_11.11-s_sa55f"/>
+              <ptr type="semh" target="ann_words.xml#words_11.11-s_sa563"/>
+            </seg>
+            <seg xml:id="groups_11.11-s_ga566">
+              <fs type="group">
+                <f name="orth">
+                  <string>u siebie</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNGp"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_11.11-s_sa560"/>
+              <ptr type="semh" target="ann_words.xml#words_11.11-s_sa564"/>
+            </seg>
+          </s>
+          <s xml:id="groups_11.56-s" corresp="ann_words.xml#words_11.56-s">
+            <seg xml:id="groups_11.56-s_ga5b1">
+              <fs type="group">
+                <f name="orth">
+                  <string>W ciągu następnych lekcyj</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_11.56-s_sa56d"/>
+              <ptr type="nonhead" target="ann_words.xml#words_11.56-s_sa581"/>
+              <ptr type="semh" target="ann_words.xml#words_11.56-s_sa595"/>
+            </seg>
+            <seg xml:id="groups_11.56-s_ga5ac">
+              <fs type="group">
+                <f name="orth">
+                  <string>rozbujanie frazy</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_11.56-s_sa596"/>
+              <ptr type="nonhead" target="ann_words.xml#words_11.56-s_sa597"/>
+            </seg>
+            <seg xml:id="groups_11.56-s_ga5b0">
+              <fs type="group">
+                <f name="orth">
+                  <string>także styl i barwę uczuciową</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_11.56-s_sa591"/>
+              <ptr type="head" target="ann_words.xml#words_11.56-s_sa598"/>
+              <ptr type="nonhead" target="ann_words.xml#words_11.56-s_sa588"/>
+              <ptr type="nonhead" target="ann_words.xml#words_11.56-s_sa599"/>
+              <ptr type="nonhead" target="ann_words.xml#words_11.56-s_sa582"/>
+            </seg>
+            <seg xml:id="groups_11.56-s_ga5b5">
+              <fs type="group">
+                <f name="orth">
+                  <string>Róża</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_11.56-s_sa59a"/>
+            </seg>
+            <seg xml:id="groups_11.56-s_ga5ad">
+              <fs type="group">
+                <f name="orth">
+                  <string>ostateczny rezultat pracy</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_11.56-s_sa583"/>
+              <ptr type="head" target="ann_words.xml#words_11.56-s_sa59b"/>
+              <ptr type="nonhead" target="ann_words.xml#words_11.56-s_sa59c"/>
+            </seg>
+            <seg xml:id="groups_11.56-s_ga5b4">
+              <fs type="group">
+                <f name="orth">
+                  <string>w sobie</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNGp"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_11.56-s_sa592"/>
+              <ptr type="semh" target="ann_words.xml#words_11.56-s_sa5a5"/>
+            </seg>
+            <seg xml:id="groups_11.56-s_ga5a6">
+              <fs type="group">
+                <f name="orth">
+                  <string>ten urzekający pierwiastek</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_11.56-s_sa584"/>
+              <ptr type="nonhead" target="ann_words.xml#words_11.56-s_sa585"/>
+              <ptr type="head" target="ann_words.xml#words_11.56-s_sa59d"/>
+            </seg>
+            <seg xml:id="groups_11.56-s_ga5b6">
+              <fs type="group">
+                <f name="orth">
+                  <string>nowość</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_11.56-s_sa59e"/>
+            </seg>
+            <seg xml:id="groups_11.56-s_ga5b8">
+              <fs type="group">
+                <f name="orth">
+                  <string>którą</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdjG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_11.56-s_sa586"/>
+            </seg>
+            <seg xml:id="groups_11.56-s_ga5b2">
+              <fs type="group">
+                <f name="orth">
+                  <string>do trudu kompozytora i Róży</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_11.56-s_sa593"/>
+              <ptr type="semh" target="ann_words.xml#words_11.56-s_sa59f"/>
+              <ptr type="nonhead" target="ann_words.xml#words_11.56-s_sa5a0"/>
+              <ptr type="nonhead" target="ann_words.xml#words_11.56-s_sa58b"/>
+              <ptr type="nonhead" target="ann_words.xml#words_11.56-s_sa5a1"/>
+            </seg>
+            <seg xml:id="groups_11.56-s_ga5b7">
+              <fs type="group">
+                <f name="orth">
+                  <string>Marta</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_11.56-s_sa5a2"/>
+            </seg>
+            <seg xml:id="groups_11.56-s_ga5b3">
+              <fs type="group">
+                <f name="orth">
+                  <string>z zasobów własnego organizmu</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_11.56-s_sa594"/>
+              <ptr type="semh" target="ann_words.xml#words_11.56-s_sa5a3"/>
+              <ptr type="nonhead" target="ann_words.xml#words_11.56-s_sa587"/>
+              <ptr type="nonhead" target="ann_words.xml#words_11.56-s_sa5a4"/>
+            </seg>
+          </s>
+          <s xml:id="groups_11.82-s" corresp="ann_words.xml#words_11.82-s">
+            <seg xml:id="groups_11.82-s_ga5e9">
+              <fs type="group">
+                <f name="orth">
+                  <string>Róża</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_11.82-s_sa5de"/>
+            </seg>
+            <seg xml:id="groups_11.82-s_ga5e5">
+              <fs type="group">
+                <f name="orth">
+                  <string>dziewczęce fluidy</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_11.82-s_sa5d1"/>
+              <ptr type="head" target="ann_words.xml#words_11.82-s_sa5df"/>
+            </seg>
+            <seg xml:id="groups_11.82-s_ga5e8">
+              <fs type="group">
+                <f name="orth">
+                  <string>w melodie</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_11.82-s_sa5dd"/>
+              <ptr type="semh" target="ann_words.xml#words_11.82-s_sa5e0"/>
+            </seg>
+            <seg xml:id="groups_11.82-s_ga5e6">
+              <fs type="group">
+                <f name="orth">
+                  <string>głębokiego wzruszenia</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_11.82-s_sa5d2"/>
+              <ptr type="head" target="ann_words.xml#words_11.82-s_sa5e1"/>
+            </seg>
+            <seg xml:id="groups_11.82-s_ga5ea">
+              <fs type="group">
+                <f name="orth">
+                  <string>Marta</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_11.82-s_sa5e2"/>
+            </seg>
+            <seg xml:id="groups_11.82-s_ga5eb">
+              <fs type="group">
+                <f name="orth">
+                  <string>taka</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdjG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_11.82-s_sa5d3"/>
+            </seg>
+            <seg xml:id="groups_11.82-s_ga5e7">
+              <fs type="group">
+                <f name="orth">
+                  <string>córeczka Adama</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_11.82-s_sa5e3"/>
+              <ptr type="nonhead" target="ann_words.xml#words_11.82-s_sa5e4"/>
+            </seg>
+          </s>
+        </p>
+        <p xml:id="groups_12-p" corresp="ann_words.xml#words_12-p">
+          <s xml:id="groups_12.4-s" corresp="ann_words.xml#words_12.4-s">
+            <seg xml:id="groups_12.4-s_ga5f4">
+              <fs type="group">
+                <f name="orth">
+                  <string>Róża</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_12.4-s_sa5f2"/>
+            </seg>
+            <seg xml:id="groups_12.4-s_ga5f5">
+              <fs type="group">
+                <f name="orth">
+                  <string>ręce</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_12.4-s_sa5f3"/>
+            </seg>
+          </s>
+          <s xml:id="groups_12.9-s" corresp="ann_words.xml#words_12.9-s">
+            <seg xml:id="groups_12.9-s_ga602">
+              <fs type="group">
+                <f name="orth">
+                  <string>nogi</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_12.9-s_sa601"/>
+            </seg>
+          </s>
+          <s xml:id="groups_12.14-s" corresp="ann_words.xml#words_12.14-s">
+            <seg xml:id="groups_12.14-s_ga60c">
+              <fs type="group">
+                <f name="orth">
+                  <string>smyczek</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_12.14-s_sa60b"/>
+            </seg>
+          </s>
+          <s xml:id="groups_12.22-s" corresp="ann_words.xml#words_12.22-s">
+            <seg xml:id="groups_12.22-s_ga619">
+              <fs type="group">
+                <f name="orth">
+                  <string>Księżycowa orkiestra</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_12.22-s_sa612"/>
+              <ptr type="head" target="ann_words.xml#words_12.22-s_sa616"/>
+            </seg>
+            <seg xml:id="groups_12.22-s_ga61b">
+              <fs type="group">
+                <f name="orth">
+                  <string>pod batutą Brahmsa</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_12.22-s_sa615"/>
+              <ptr type="semh" target="ann_words.xml#words_12.22-s_sa617"/>
+              <ptr type="nonhead" target="ann_words.xml#words_12.22-s_sa618"/>
+            </seg>
+            <seg xml:id="groups_12.22-s_ga61c">
+              <fs type="group">
+                <f name="orth">
+                  <string>dalej</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_12.22-s_sa613"/>
+            </seg>
+          </s>
+          <s xml:id="groups_12.34-s" corresp="ann_words.xml#words_12.34-s">
+            <seg xml:id="groups_12.34-s_ga62f">
+              <fs type="group">
+                <f name="orth">
+                  <string>na miejscu skrzypiec</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_12.34-s_sa627"/>
+              <ptr type="semh" target="ann_words.xml#words_12.34-s_sa629"/>
+              <ptr type="nonhead" target="ann_words.xml#words_12.34-s_sa62a"/>
+            </seg>
+            <seg xml:id="groups_12.34-s_ga631">
+              <fs type="group">
+                <f name="orth">
+                  <string>cisza</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_12.34-s_sa62b"/>
+            </seg>
+            <seg xml:id="groups_12.34-s_ga632">
+              <fs type="group">
+                <f name="orth">
+                  <string>czarna</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdjG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_12.34-s_sa622"/>
+            </seg>
+            <seg xml:id="groups_12.34-s_ga630">
+              <fs type="group">
+                <f name="orth">
+                  <string>jak zaskórna woda</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_12.34-s_sa628"/>
+              <ptr type="nonhead" target="ann_words.xml#words_12.34-s_sa623"/>
+              <ptr type="semh" target="ann_words.xml#words_12.34-s_sa62c"/>
+            </seg>
+          </s>
+          <s xml:id="groups_12.57-s" corresp="ann_words.xml#words_12.57-s">
+            <seg xml:id="groups_12.57-s_ga658">
+              <fs type="group">
+                <f name="orth">
+                  <string>tu i ówdzie</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_12.57-s_sa648"/>
+            </seg>
+            <seg xml:id="groups_12.57-s_ga656">
+              <fs type="group">
+                <f name="orth">
+                  <string>refleks sola</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_12.57-s_sa650"/>
+              <ptr type="nonhead" target="ann_words.xml#words_12.57-s_sa651"/>
+            </seg>
+            <seg xml:id="groups_12.57-s_ga659">
+              <fs type="group">
+                <f name="orth">
+                  <string>cisza</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_12.57-s_sa652"/>
+            </seg>
+            <seg xml:id="groups_12.57-s_ga655">
+              <fs type="group">
+                <f name="orth">
+                  <string>coraz głębsza</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdjG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_12.57-s_sa649"/>
+              <ptr type="head" target="ann_words.xml#words_12.57-s_sa645"/>
+            </seg>
+            <seg xml:id="groups_12.57-s_ga65a">
+              <fs type="group">
+                <f name="orth">
+                  <string>szersza</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdjG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_12.57-s_sa646"/>
+            </seg>
+            <seg xml:id="groups_12.57-s_ga657">
+              <fs type="group">
+                <f name="orth">
+                  <string>resztkę wibracji</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_12.57-s_sa653"/>
+              <ptr type="nonhead" target="ann_words.xml#words_12.57-s_sa654"/>
+            </seg>
+          </s>
+          <s xml:id="groups_12.64-s" corresp="ann_words.xml#words_12.64-s">
+            <seg xml:id="groups_12.64-s_ga666">
+              <fs type="group">
+                <f name="orth">
+                  <string>Z wolna</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_12.64-s_sa65c"/>
+            </seg>
+            <seg xml:id="groups_12.64-s_ga665">
+              <fs type="group">
+                <f name="orth">
+                  <string>także widmowe instrumenty</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="nonhead" target="ann_words.xml#words_12.64-s_sa663"/>
+              <ptr type="nonhead" target="ann_words.xml#words_12.64-s_sa661"/>
+              <ptr type="head" target="ann_words.xml#words_12.64-s_sa664"/>
+            </seg>
+          </s>
+          <s xml:id="groups_12.72-s" corresp="ann_words.xml#words_12.72-s">
+            <seg xml:id="groups_12.72-s_ga673">
+              <fs type="group">
+                <f name="orth">
+                  <string>Po jednemu</string>
+                </f>
+                <f name="type">
+                  <symbol value="AdvG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_12.72-s_sa66a"/>
+            </seg>
+            <seg xml:id="groups_12.72-s_ga672">
+              <fs type="group">
+                <f name="orth">
+                  <string>w próżnię</string>
+                </f>
+                <f name="type">
+                  <symbol value="PrepNG"/>
+                </f>
+              </fs>
+              <ptr type="synh" target="ann_words.xml#words_12.72-s_sa670"/>
+              <ptr type="semh" target="ann_words.xml#words_12.72-s_sa671"/>
+            </seg>
+          </s>
+          <s xml:id="groups_12.78-s" corresp="ann_words.xml#words_12.78-s">
+            <seg xml:id="groups_12.78-s_ga67e">
+              <fs type="group">
+                <f name="orth">
+                  <string>Chaos bezdźwięczny</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_12.78-s_sa67c"/>
+              <ptr type="nonhead" target="ann_words.xml#words_12.78-s_sa679"/>
+            </seg>
+            <seg xml:id="groups_12.78-s_ga67f">
+              <fs type="group">
+                <f name="orth">
+                  <string>harmonię</string>
+                </f>
+                <f name="type">
+                  <symbol value="NG"/>
+                </f>
+              </fs>
+              <ptr type="head" target="ann_words.xml#words_12.78-s_sa67d"/>
+            </seg>
+          </s>
+        </p>
+      </body>
+    </text>
+  </TEI>
+</teiCorpus>

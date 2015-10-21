@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teiCorpus xmlns:xi="http://www.w3.org/2001/XInclude" xmlns="http://www.tei-c.org/ns/1.0">
+ <xi:include href="NKJP_1M_header.xml"/>
+ <TEI>
+  <xi:include href="header.xml"/>
+  <text xml:id="txt_text" xml:lang="pl">
+   <body xml:id="txt_body">
+    <div xml:id="txt_1-div" decls="#h_1-bibl">
+     <ab n="p882in890of:PWN:030-2-000000001" xml:id="txt_1.1-ab">Łzy padały na cremoński lakier. Szkoda, nie wolno było niszczyć przedmiotu, na który ojciec, biedaczysko, wydał całą schedę po Luizie... Otarła je lewą, umęczoną ręką.</ab>
+     <ab n="p883in891of:PWN:030-2-000000001" xml:id="txt_1.2-ab">Wszedł Adam. Zawiało wodą kwiatową Maréchal Niel. Starannie domykał drzwi za sobą.</ab>
+     <ab n="p884in892of:PWN:030-2-000000001" xml:id="txt_1.3-ab">Trwała dalej w bezruchu.</ab>
+    </div>
+    <div xml:id="txt_2-div" decls="#h_2-bibl">
+     <ab n="p45in53of:PWN:030-2-000000001" xml:id="txt_2.1-ab">Pan dyrektor był nieobecny, a Róża stała pod piecem, czekając, kiedy panna Aniela Bądska ukończy gamy i zechce łaskawie zaakompaniować jedynej uczennicy papy "Moment musical" Szuberta. Jedynej uczennicy - pierwszej "adeptce" skrzypiec Warszawskiego Konserwatorium na Tamce. Czarnej, chudej dziewczynie z rumieńcami latającymi jak płomień po śniadych policzkach, z lśniącym długim warkoczem, z kacapską wymową i z niemodnym medalionem na szyi.</ab>
+    </div>
+    <div xml:id="txt_3-div" decls="#h_3-bibl">
+     <ab n="p804in812of:PWN:030-2-000000001" xml:id="txt_3.1-ab">To wszystko było nowe. Nowe także były miesięczne wędrówki na grób męża i sjesty na cmentarnej ławeczce, ze wzrokiem żarliwie utkwionym w darninę. I łzy po nocach, i nasłuchiwanie, czy Stenia nie kaszle, i rumieńce wstydu, gdy pytano przy wnukach: a gdzież to pan zięć? a cóż to o panu inżynierze nie słychać?</ab>
+    </div>
+    <div xml:id="txt_4-div" decls="#h_4-bibl">
+     <ab n="p114in122of:PWN:030-2-000000001" xml:id="txt_4.1-ab">Prawie wesoła - dokończyła przy pomocy krokodyla zdejmowania chusty. Strzepnęła ją, złożyła, odniosła tamże, gdzie portrecik ojca.</ab>
+     <ab n="p115in123of:PWN:030-2-000000001" xml:id="txt_4.2-ab">Telefon zadzwonił, upudrowała się gorączkowo, przybrała oschły wyraz twarzy - może Marta? - i podeszła do aparatu. Ledwie zdjęła słuchawkę, Sabina przycwałowała słoniowym truchtem przez korytarz.</ab>
+    </div>
+    <div xml:id="txt_5-div" decls="#h_5-bibl">
+     <ab n="p1275in1283of:PWN:030-2-000000001" xml:id="txt_5.1-ab">Róża milczała. Słuchała napomnień jak ptasiego szczebiotu, który do niczego nie obowiązuje, gdyż nic ludzkiego nie oznacza. Oczy powlekła biaława szklistość, co wzmogło tajemnicę spojrzenia. Wydawała się spoczywać po niezmiernym wysiłku - szczęśliwa ze zdobyczy, pewna własnej potęgi, wreszcie syta wiedzy i spokoju.</ab>
+     <ab n="p1276in1284of:PWN:030-2-000000001" xml:id="txt_5.2-ab">Uśmiechnęła się do córki ze swej błogiej dali.</ab>
+    </div>
+    <div xml:id="txt_6-div" decls="#h_6-bibl">
+     <ab n="p100in108of:PWN:030-2-000000001" xml:id="txt_6.1-ab">Radio gra "Close your eyes". Róża - wzburzona pominięciem przez córkę swojej wizyty, zirytowana brakiem szacunku tutaj, w tym zięciowskim domu, dla empirowego stolika, zmęczona gniewem - usłyszała pieśń i pragnęła zapomnieć, jaki jest dzień, jaka sytuacja.</ab>
+     <ab n="p101in109of:PWN:030-2-000000001" xml:id="txt_6.2-ab">Zerknęła w lustro, obciągnęła na sobie sweter w czerwone skrzydła...</ab>
+    </div>
+    <div xml:id="txt_7-div" decls="#h_7-bibl">
+     <ab n="p1785in1793of:PWN:030-2-000000001" xml:id="txt_7.1-ab">Marta rzuciła telefon; stając na progu, stanęła twarzą w twarz z matką. Róża - wysoko osadzona - patrzyła przed siebie nad miarę otwartymi oczami. W tych oczach odbijał się widok nietutejszy. Źrenice usiłowały go ogarnąć w całej jego dzikiej wielkości, rozszerzały się, rosły ciągle Marta w smudze nieziemskiego widzenia szła ścierpnięta. Uklękła... Opasała ramionami duże, ciepłe ciało, przytuliła głowę do łona, które ją wydało światu.</ab>
+    </div>
+    <div xml:id="txt_8-div" decls="#h_8-bibl">
+     <ab n="p1013in1021of:PWN:030-2-000000001" xml:id="txt_8.1-ab">W okresie szkolnym nie inaczej przedstawiała się sprawa koleżanek. Raz do roku tylko bywały zapraszane. Róża wtedy występowała ze wspaniałym przyjęciem. Stół uginał się pod tortami, owocami, kremami, z mebli zdejmowano pokrowce, srebra błyszczały, posadzki lśniły. Program zabawy był ściśle ustalony. Zazwyczaj latarnia czarnoksięska zajmowała gros czasu, później należało kolejno deklamować wiersze, godzinę trwał "talar" i "pierścionek", godzinę tańce, przeplatane grą w szarady i lemoniadę. O ósmej wieczór gości żegnano.</ab>
+    </div>
+    <div xml:id="txt_9-div" decls="#h_9-bibl">
+     <ab n="p167in175of:PWN:030-2-000000001" xml:id="txt_9.1-ab">Ewa, Éveline - to było imię, które nadała jej Luiza, dla względów prestiżowych. Róża pamiętała dobrze ten dzień.</ab>
+     <ab n="p168in176of:PWN:030-2-000000001" xml:id="txt_9.2-ab">Jesienią w niedzielę szły z ciotką na obrzędowy spacer do Łazienek, placem Wareckim, ulicą Szpitalną, Bracką, Alejami... Dorożki i kabriolety turkotały po wyboistym bruku. W pojazdach piętrzyły się damy i dziewczynki, szumiące od krochmalu, od jedwabiu liberty, od ostrowłosej sztywnej wełny. Panowie w cylindrach i w melonikach tkwili bokiem na przednich ławeczkach.</ab>
+    </div>
+    <div xml:id="txt_10-div" decls="#h_10-bibl">
+     <ab n="p1240in1248of:PWN:030-2-000000001" xml:id="txt_10.1-ab">Wówczas Martę strach przejął. Jak to? Więc śpiew córki przestał być własną sprawą Róży? Więc pojawiły się jakieś inne sprawy? Prawda: codzienny, nieubłagany przymus "stąd dotąd, stąd dotąd masz się nauczyć, pamiętaj, żeby następnym razem nie powtórzył się ten błąd" - jak gdyby chodziło o małą, bezwolną dziewczynę - to dokuczało Marcie do żywego. Ale mimo wszystkie bunty - niczego tak nie lubiła jak widzieć matkę szczęśliwą ze swojej przyczyny.</ab>
+    </div>
+    <div xml:id="txt_11-div" decls="#h_11-bibl">
+     <ab n="p921in929of:PWN:030-2-000000001" xml:id="txt_11.1-ab">Marta ciskała nuty, zamykała się z trzaskiem u siebie.</ab>
+     <ab n="p922in930of:PWN:030-2-000000001" xml:id="txt_11.2-ab">W ciągu następnych lekcyj rozbujanie frazy dawało się powściągnąć, także styl i barwę uczuciową poddawała Róża; a jednak ostateczny rezultat pracy zawierał w sobie ten urzekający pierwiastek - nowość, którą do trudu kompozytora i Róży dodawała Marta z zasobów własnego organizmu. Róża chwytała dziewczęce fluidy, przesączone w melodie, doznając głębokiego wzruszenia: "Więc to jest Marta, więc taka jest córeczka Adama".</ab>
+    </div>
+    <div xml:id="txt_12-div" decls="#h_12-bibl">
+     <ab n="p878in886of:PWN:030-2-000000001" xml:id="txt_12.1-ab">Róża opuściła ręce. Siadła - nogi drżały. Rzuciła smyczek...</ab>
+     <ab n="p879in887of:PWN:030-2-000000001" xml:id="txt_12.2-ab">Księżycowa orkiestra pod batutą Brahmsa grała dalej. Tylko na miejscu skrzypiec wystąpiła cisza - czarna jak zaskórna woda. Jeszcze tu i ówdzie błyskał refleks sola... cisza przecież czyniła się coraz głębsza, szersza i pochłaniała resztkę wibracji. Z wolna milkły także widmowe instrumenty. Po jednemu wsiąkały w próżnię... Chaos bezdźwięczny pokrył wreszcie harmonię.</ab>
+    </div>
+   </body>
+  </text>
+ </TEI>
+</teiCorpus>
