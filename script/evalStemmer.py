@@ -79,6 +79,9 @@ fp=0
 tp1=0
 fp1=0
 fn1=0
+tpF=0
+fpF=0
+fnF=0
 besttp2=0
 bestfp2=0
 tp2=0
@@ -88,12 +91,14 @@ sfp = 0
 sfn = 0
 
 goldLemmas={}
-onlyPunct = re.compile('^\W+$') # csak irasjelbol all az input
+onlyPunct = re.compile('^\W+$') # input contains only punctuations
 
 while True:
     (word, stems) = f.getNextWordAndStems()
     if word == None:
         break
+
+#    stems.append(word) # add original word form as well
 
 #    print(str(tp+fp+fn) + ' ' + str(word) + str(stems))
         #new word
@@ -128,8 +133,8 @@ while True:
 
     word = word.lower()
     gStem = gStem.lower()
-#    if gStem in stopwords:
-#        continue # stopword: NEM SZAMOLJUK
+    if gStem in stopwords:
+        continue # stopword: SKIP
         # not stopword: count it
     goldHits.addHit(word, gStem, sentID)  # TODO: a kis/nagybetut az inputrol at kene masolni
 #        if gStem in stems:
@@ -166,7 +171,7 @@ while True:
 #            fn += 1
 
 #    gStem = gStem.lower()
-    # egyes metrika : minden egyes teves alternativa +1 fp
+    # metric #2.a for ranking: each false alternatives means +1 fp (strict mode)
     bestStem = getBestStem(stems)
     if len(stems)>0:
         if bestStem == gStem or stems[0] == gStem:
@@ -175,27 +180,29 @@ while True:
             fn1 += 1 # vagy az legyen az fn, ha teljesen bena tovet ad?
         fp1 += len(stems) - 1 
 
-    # kettes metrika: accuracy: az 1. ill leghosszabb hanyszor volt jo
-    if bestStem == gStem:  # leghosszabb
-#    if (len(stems) > 0 and stems[0] == gStem): # elso
+    # metric #1 - accuracy: how many times is the first or longest stem correct?
+    if bestStem == gStem:  # longest stem
+#    if (len(stems) > 0 and stems[0] == gStem): # first stem
         tp2 += 1
     else:
         fp2 += 1
 
-    # ugyanezen metrika, de legjobb eset szamolasa
+    # metric #1.a accuracy, but it supposes the best case: maximum accuracy by choosing the best correct stem
+    #   if the correct stem exists in stem alternatives => it means tp
     if gStem in stems:
         besttp2 += 1
     else:
         bestfp2 += 1
 
 
-    # harmas metrika: minden gold lemma
+    # preparing metric #3: we need all correct (gold) lemmas of a word form
     c = goldLemmas.get(word, 0)
     if c == 0:
         goldLemmas[ word ] = set([gStem])
     else:
         c.add(gStem)
 
+    # metric #2.b for ranking: for n lemmas before the correct one means +n fp and 1 tp (Linden, 2009)
     rankCounter = -1
     for i in range(0, len(stems)):
         if stems[i] == gStem:
@@ -204,28 +211,32 @@ while True:
     if rankCounter != -1:
         # volt jo talalat
         tp += 1
-        fp += rankCounter # az n. helyen volt a jo to
+        fp += rankCounter # correct stem was at position n.
     else:
-        fn += 1 # nem volt sehol a jo to
+        fn += 1 # there was no correct stem
 #        print('fn: ' + word + ' ' + stem + ' ' + gStem)
 
-#    if (gStem == stem):
-#        tp += 1 # eltalalta
-#    elif (gStem in stems):
+    # metric #2.c: concentrates on the first stem: 
+    #   correct means tp, 
+    #   incorrect is fn, and
+    #   fp is the case when the correct stem exists in the alternatives (but not at the first place)
+    if (gStem == stem):
+        tpF += 1 # eltalalta
+    elif (gStem in stems):
 #        print('fp: ' + gStem + '?' + stem)
-#        fp += 1 # a to alternativak kozott ott volt a jo
-#    else:
+        fpF += 1 # a to alternativak kozott ott volt a jo
+    else:
 #        print('fn: ' + gStem + '?' + stem)
-#        fn += 1 # rossz to
-    if (False and gStem.lower() != stem.lower()):
-        print(gStem + '  ' + stem + '(' + ','.join(stems) + ')')
+        fnF += 1 # rossz to
+#    if (False and gStem.lower() != stem.lower()):
+#        print(gStem + '  ' + stem + '(' + ','.join(stems) + ')')
 
-#f.close()
-#fGold.close()
 if debug:
     fDebug.close()
 
-# 3-as metrics
+# metric #3: takes into consideration all correct lemmas occured in the corpus compared to the output of a stemmer
+#  Each word form in the corpus gets its all lemmas, and these sets were compared to the output of a stemmer.
+#  Their intersection is tp, lemmas only in corpus are fn, and lemmas only from stemmer are fp.
 f.reset()
 if inputFormat == 'foma':
     fGold.seek(0)
@@ -257,49 +268,39 @@ while True:
 
 fGold.close()
 
+def countFscore(tp, fp, fn, oov):
+    if oov is not None:
+        oovRate=0
+        if tp+fp+fn > 0:
+            oovRate = oov/(tp+fp+fn)
+        sys.stdout.write(' tp = {}\n fp = {}\n fn = {}\n oov={} ({})\n sum={}\n'.format(tp, fp, fn, oov, oovRate, tp+fp+fn))
+    else:
+        sys.stdout.write(' tp = {}\n fp = {}\n fn = {}\n'.format(tp, fp, fn))
+    prec = 0 if tp+fp==0 else tp / (tp + fp)
+    rec  = 0 if tp+fn==0 else tp / (tp + fn)
+    F = 0
+    if prec + rec != 0:
+        F = 2*prec*rec / (prec + rec)
+    sys.stdout.write(' P = {}\n R = {}\n F = {}\n'.format(prec, rec, F))
+
+
 # print summary
-sys.stdout.write('ranking metrics\n')
-#sys.stdout.write('tp = {}\nfp = {}\nfn = {}\noov = {}\n'.format(tp, fp, fn, oov))
-oovRate=0
-if tp+fp+fn > 0:
-    oovRate = oov/(tp+fp+fn)
-sys.stdout.write('tp = {}\nfp = {}\nfn = {}\noov={} ({})\nsum={}\n'.format(tp, fp, fn, oov, oovRate, tp+fp+fn))
-prec = 0 if tp+fp==0 else tp / (tp + fp)
-rec  = 0 if tp+fn==0 else tp / (tp + fn)
-F = 0
-if prec + rec != 0:
-    F = 2*prec*rec / (prec + rec)
-sys.stdout.write('P = {}\nR = {}\nF = {}\n'.format(prec, rec, F))
-
-
-sys.stdout.write('\nstrict\n')
-#sys.stdout.write('tp = {}\nfp = {}\nfn = {}\noov = {}\n'.format(tp, fp, fn, oov))
-sys.stdout.write('tp = {}\nfp = {}\nfn = {}\n'.format(tp1, fp1, fn1, oov))
-prec = 0 if tp1+fp1==0 else tp1 / (tp1 + fp1)
-rec  = 0 if tp1+fn1==0 else tp1 / (tp1 + fn1)
-F = 0
-if prec + rec != 0:
-    F = 2*prec*rec / (prec + rec)
-sys.stdout.write('P = {}\nR = {}\nF = {}\n'.format(prec, rec, F))
-
-
-sys.stdout.write('\naccuracy\n')
-#sys.stdout.write('tp = {}\nfp = {}\nfn = {}\noov = {}\n'.format(tp, fp, fn, oov))
+sys.stdout.write('\nmetric #1 accuracy\n')
 if tp2+fp2>0:
     sys.stdout.write('tp = {}\nfp = {}\nacc={}\n'.format(tp2, fp2, tp2/(tp2+fp2)))
 sys.stdout.write('BEST acc.\ntp = {}\nfp = {}\nacc={}\n'.format(besttp2, bestfp2, besttp2/(besttp2+bestfp2)))
 
-sys.stdout.write('\nsets\n')
-#sys.stdout.write('tp = {}\nfp = {}\nfn = {}\noov = {}\n'.format(tp, fp, fn, oov))
-if stp+sfp+sfn>0:
-    sys.stdout.write('tp = {}\nfp = {}\nfn = {}\noov={} ({})\nsum={}\n'.format(stp, sfp, sfn, oov, oov/(stp+sfp+sfn), stp+sfp+sfn))
-prec = 0 if stp+sfp==0 else stp / (stp + sfp)
-rec  = 0 if stp+sfn==0 else stp / (stp + sfn)
-F = 0
-if prec + rec != 0:
-    F = 2*prec*rec / (prec + rec)
-sys.stdout.write('P = {}\nR = {}\nF = {}\n'.format(prec, rec, F))
+sys.stdout.write('\nmetric #2.a for ranking - strict\n')
+countFscore(tp1, fp1, fn1, None)
 
+sys.stdout.write('\nmetric #2.b for ranking - light\n')
+countFscore(tp, fp, fn, oov)
+
+sys.stdout.write('\nmetric #2.c for ranking - concentrates on the first stem\n')
+countFscore(tpF, fpF, fnF, None)
+
+sys.stdout.write('\nmetric #3: by all correct stems\n')
+countFscore(stp, sfp, sfn, None)
 
 #sys.exit(0) # most csak a lemmapontossag kell
 
@@ -318,17 +319,17 @@ for w in goldHits.getWords():
     stp += len(a) # benne van a goldban ez a talalat
     a = sIdsGold.difference(sIdsCurr) # new set with elements in g but not in h
     sfn += len(a) # a gold ezen talata nincs benne az eredmenyben (false negative)
-    if (len(a) > 0):
-        printDebugInfos = 1
+#    if (len(a) > 0):
+#        printDebugInfos = 1
     b = sIdsCurr.difference(sIdsGold)
-    if len(b) > 0:
-        base = len(b) % 10
-        n = 0
-        if len(b) > 10:
-            n = math.log(len(b) - base) + 10
-            #if len(b) % 100 >= 50:
-            #    n += 50 # 50 felettiek min. azt kapjak, mint a 50 alattiak
-        sfp += base + n # 10 alatti erteket siman hozzadom + logaritmikusan: ranking szimulacioja
+    sfp += len(b)
+#    if len(b) > 0:
+#        base = len(b) % 10
+#        n = 0
+#        if len(b) > 10:
+#            n = math.log(len(b) - base) + 10
+#        sfp += base + n # 10 alatti erteket siman hozzadom + logaritmikusan: ranking szimulacioja
+
 #        if len(b) < 10:
 #            sfp += 1 # van olyan talalata, ami nincs a goldban, tudom durva, de csak +1
 #        else:
@@ -338,7 +339,7 @@ for w in goldHits.getWords():
 #        sfp += len(a)/10 # nincs benne a goldban ez a talalat (false positive), a ranking ezeket jo esetben hatratolja
 #    else:
 #        sfp += len(a) # 10 alatt siman hozzadjuk
-#    if (len(a) > 0):
+#    if (len(b) > 0):
 #        printDebugInfos = 1
 
 #    for g in sIdsGold:
@@ -351,7 +352,7 @@ for w in goldHits.getWords():
 #            # debug
 #            printDebugInfos = 1
 #            sfp += 1 # nincs benne a goldban ez a talalat (false positive)
-    if False and printDebugInfos:
+    if printDebugInfos:
         print('input word: ' + w)
 
         print(' gold stems: ' + str(goldHits.getWords().get(w)))
@@ -360,9 +361,11 @@ for w in goldHits.getWords():
         print('  =>' + str(currHits.getWordsByStem(w)))
         print(' gold hits:' + str(len(sIdsGold)))
         print(' curr hits:' + str(len(sIdsCurr)))
-#        print(' gold hits:' + str(sIdsGold))
-#        print(' curr hits:' + str(sIdsCurr))
-        print(' fn hits:' + str(a))
+        print(' gold hits:' + str(sIdsGold))
+        print(' curr hits:' + str(sIdsCurr))
+        print(' tp:' + str(sIdsGold.intersection(sIdsCurr)))
+        print(' fp:' + str(b))
+        print(' fn:' + str(a))
 
 
 #debug
@@ -370,11 +373,7 @@ for w in goldHits.getWords():
 #currHits.print()
 
 sys.stdout.write('\n\nsearch eval\n')
-sys.stdout.write('tp = {}\nfp = {}\nfn = {}\n'.format(stp, sfp, sfn))
-prec = 0 if stp+sfp==0 else stp / (stp + sfp)
-rec  = 0 if stp+sfn==0 else stp / (stp + sfn)
-F = 2*prec*rec / (prec + rec)
-sys.stdout.write('P = {}\nR = {}\nF = {}\n'.format(prec, rec, F))
+countFscore(stp, sfp, sfn, None)
 
 # Paice test
 lemmas = goldHits.getPaiceStems()

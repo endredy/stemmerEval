@@ -615,7 +615,7 @@ public class evalLucene {
 			IndexSearcher searcher = new IndexSearcher(reader);
 			
 			QueryParser parser = new QueryParser("contents", analyzer);
-			Query query = parser.parse(input);
+			Query query = parser.parse(QueryParser.escape(input));
 			
 			int n = limit > 0 ? limit : searcher.count(query);
 			if (n == 0)
