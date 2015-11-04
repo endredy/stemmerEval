@@ -26,6 +26,7 @@ package stemEvalLucene;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.Tokenizer;
+import org.apache.lucene.analysis.core.StopFilter;
 import org.apache.lucene.analysis.core.WhitespaceTokenizer;
 import org.apache.lucene.analysis.en.EnglishMinimalStemFilter;
 import org.apache.lucene.analysis.en.EnglishPossessiveFilter;
@@ -43,6 +44,7 @@ import org.apache.lucene.analysis.snowball.SnowballFilter;
 import org.apache.lucene.analysis.standard.StandardFilter;
 import org.apache.lucene.analysis.stempel.StempelFilter;
 import org.apache.lucene.analysis.stempel.StempelStemmer;
+import org.apache.lucene.analysis.util.CharArraySet;
 import org.apache.lucene.analysis.pl.PolishAnalyzer;
 import org.apache.lucene.analysis.morfologik.MorfologikFilter;
 
@@ -64,7 +66,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
-import java.net.UnknownServiceException;
+import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.FileVisitResult;
 import java.nio.file.Files;
@@ -107,20 +109,48 @@ import org.apache.lucene.queryparser.classic.ParseException;
 import java.io.FileNotFoundException;
 
 
-// https://www.elastic.co/guide/en/elasticsearch/guide/current/choosing-a-stemmer.html
-
-/** Index all text files under a directory.
+/** Corpus based evaluation of stemmers, by the help of Lucene
 * <p>
-* This is a command-line application demonstrating simple Lucene indexing.
-* Run it with no command-line arguments for usage information.
+* This is a command-line application evaluating stemmers of Lucene.
+* Run it with the config file, which describes the tested stemmers, path of indexing documents and IR gold standard.
+* 
+* 
+* "The main idea of this article is that every corpus with lemmas can be used 
+* as an IR evaluation data set. In the tool presented here, every sentence in the corpus 
+* will be the result item of an IR (hit), and its words (in their original forms) are the queries. 
+* These word-sentence connections will be used as a gold standard, and each stemmer will be tested
+* against this: calculation of precision and recall is based on the sets of sentences determined 
+* by stemmers and by the gold standard.
+* 
+* On the one hand, the tool contains a Lucene evaluation java code as well: sentences of the corpora 
+* (as separate documents) are indexed by stemmers, and each word (as a query) gets a result set which 
+* is compared to the gold standard. This is a classical collection set based evaluation, but the 
+* collection is big (millions of doc) and it is made automatically from the corpus. This java code 
+* evaluates in two ways: evaluates all result items, and evaluates only the first n results. 
+* This latter option reflects the mode when a human verifies the results: only the first n items matter."
+* 
 */
+//https://www.elastic.co/guide/en/elasticsearch/guide/current/choosing-a-stemmer.html
 public class evalLucene {
 
-//	private String defIndexPath;
-//	private String defDocsPath;
 	private MyAnalyzer analyzer;
 	
+	/**
+	 * a corpus usually has more domains (newspaper, literature, etc)
+	 * They are evaluated separately, to give comparable overview a stemmer between domains.
+	 * This class contains the parameters of a domain:
+	 *  path of documents
+	 *  path of indexes
+	 *  path of gold standard (all input words and their doc ids)
+	 * */
     private class catalog{
+    	
+    	/**
+    	 * constructor, 
+    	 * @param docPath input, path of documents
+    	 * @param indexPath path of indexes (where they will be)
+    	 * @param goldPath path of gold standard
+    	 * */
     	public catalog(String docPath, String indexPath, String goldPath) {
 			this.docPath = docPath;
 			this.indexPath = indexPath;
@@ -130,18 +160,102 @@ public class evalLucene {
     	protected String indexPath;
     	protected String goldPath;
     }
+    
+    /**
+     * This class contains the intermediate results of a stemmer in each domain.
+     * Finally, it counts a total as well.
+     * */
+    private class stemmerResults{
+    	private Map<String, Map<String, String>> evals = new HashMap<String, Map<String, String>>();
+    	private Map<String, Long> totals = new HashMap<String, Long>();
+    	
+    	private void addResult(String stemmer, String domain, float F,
+    			long tp, long fp, long fn){
+    		Map<String, String> curr = evals.get(domain);
+    		if (curr == null){
+    			curr = new HashMap<String, String>();
+    			evals.put(domain, curr);
+    		}
+   			curr.put(stemmer, String.valueOf(F));
+   			
+   			addTotal(stemmer, "tp", tp);
+   			addTotal(stemmer, "fp", fp);
+   			addTotal(stemmer, "fn", fn);
+   			
+    	}
+    	private void addTotal(String stemmer, String name, long value){
+    		Long t = totals.get(stemmer + name);
+   			if (t != null)
+   				value += t.longValue();
+   			totals.put(stemmer + name, new Long(value));
+    	}
+
+    	private void printSummaMetric(){
+    		//print 1st row: every stemmer
+    		for(Map.Entry<String, Map<String, String>> entry : evals.entrySet()){
+    			
+    			for(Map.Entry<String, String> stemmer : entry.getValue().entrySet()){
+    				System.out.print("\t" + stemmer.getKey() + "\t");
+    			}
+    			break;
+    		}
+    		log("");
+    		System.out.println();
+    		// print each row: one domain with each stemmer
+    		for(Map.Entry<String, Map<String, String>> entry : evals.entrySet()){
+    			
+    			System.out.print("\n" + entry.getKey());
+    			for(Map.Entry<String, String> stemmer : entry.getValue().entrySet()){
+    				System.out.print("\t" + stemmer.getValue());
+    			}
+    		}
+    		
+    		//total line
+    		System.out.print("\ntotal"); 
+    		for(Map.Entry<String, Map<String, String>> entry : evals.entrySet()){
+    			
+    			
+    			for(Map.Entry<String, String> stemmer : entry.getValue().entrySet()){
+    				long tp=0, fp=0, fn=0;
+    				//System.out.print(totals);
+    				Long t = totals.get(stemmer.getKey() + "tp");
+    				if (t != null) tp = t.longValue();
+    				t = totals.get(stemmer.getKey() + "fp");
+    				if (t != null) fp = t.longValue();
+    				t = totals.get(stemmer.getKey() + "fn");
+    				if (t != null) fn = t.longValue();
+    				
+    				float F = countFscore(tp, fp, fn, false);
+
+    				System.out.print("\t" + 100*F);
+    			}
+    			break;
+    		}
+    		System.out.println();
+    	}
+    	
+    }
 	private Map<String, catalog> catalogs = new HashMap<String, catalog>();
-	private Map<String, Map<String, String>> fullEvals = new HashMap<String, Map<String, String>>();
-	private Map<String, Map<String, String>> limitedEvals = new HashMap<String, Map<String, String>>();
+
+	/** evaluation of all hit results */
+	private stemmerResults fullEvals = new stemmerResults();
+	/** evaluation of all the first n hit results */
+	private stemmerResults limitedEvals = new stemmerResults();
+	private int debugLevel = 0;
  
 	// https://lucene.apache.org/core/5_2_1/core/org/apache/lucene/analysis/package-summary.html
 	class MyAnalyzer extends Analyzer {
 
         private String type;
-//        private String dictPath;
         private Properties dictProperties;
+        /** index original word as well */
         private boolean includingOriginalTerm = false;
+        /** stopwords, they are ignored by stemmers */
+        private Set<String> stopwords = null;
         
+        /**
+         * set the type of the stemmer
+         * */
         public boolean setType(String s, Properties prop){
             type = s;
             if (prop != null){
@@ -149,11 +263,17 @@ public class evalLucene {
             	String tmp = prop.getProperty("includeOriginalTerm");
             	if (tmp != null && tmp.equals("1"))
             		includingOriginalTerm = true;
+            	tmp = prop.getProperty("stopWordFile");
+            	if (tmp != null && !tmp.isEmpty())
+            		stopwords = loadStopWords(tmp);
             }
-            return true; //TODO: check
+            return true; 
         }
 
 		@Override
+		/**
+		 * it makes the stemming in Lucene (set as filters)
+		 * */
 		protected TokenStreamComponents createComponents(String fieldName) {
 
 			Tokenizer source = new WhitespaceTokenizer(); //new LetterTokenizer();//
@@ -165,16 +285,16 @@ public class evalLucene {
 			else
 				filter = source; // ha nem akarjuk
 			
-			//			TokenStream source = new StandardTokenizer( reader);
-			//Tokenizer source = new LowerCaseTokenizer(version, reader);
-//			TokenStream result = null;
+			if (stopwords != null && !stopwords.isEmpty()){
+				CharArraySet cas = new CharArraySet(stopwords, true);
+				filter = new StopFilter(filter, cas);
+			}
 			
 			// === EN ===
 			if (type.equals("en_kstem"))
 		        filter = new KStemFilter(filter);
 			else if (type.equals("en_porter"))
 		        filter = new PorterStemFilter(filter);
-			//            		result = new PorterStemFilter(new LowerCaseTokenizer(reader));
 			else if (type.equals("en_possessive"))
 			    filter = new EnglishPossessiveFilter(filter);
 			else if (type.equals("en_minimal"))
@@ -193,7 +313,7 @@ public class evalLucene {
 			else if (type.equals("hu_snowball"))
 			    filter = new SnowballFilter(filter, new HungarianStemmer());
 			// === PL ===
-			// 3 opcio: hunspell + ez a ketto  (http://solr.pl/en/2012/04/02/solr-4-0-and-polish-language-analysis/)
+			// 3 options (http://solr.pl/en/2012/04/02/solr-4-0-and-polish-language-analysis/)
 		    else if (type.equals("pl_stempel"))
 		    	filter = new StempelFilter(filter, new StempelStemmer(PolishAnalyzer.getDefaultTable()));
 		    else if (type.equals("pl_morfologik"))
@@ -201,7 +321,6 @@ public class evalLucene {
 		    else if (type.equals("nostem"))
 		    	filter = new StandardFilter(filter);
 		    else{
-//		    	throw new UnknownServiceException("unknown stemmer type: " + type);
 		    	log("ERROR: unknown stemmer type: " + type);
 		    	filter = new StandardFilter(filter);
 		    }
@@ -214,6 +333,10 @@ public class evalLucene {
 	public evalLucene() {
 	}
  
+	public void setDebugLevel(int debugLevel) {
+		this.debugLevel = debugLevel;
+	}
+
 	public void addCatalog(String name, String docPath, String indexPath, String goldPath){
 		if (docPath == null || indexPath == null || goldPath == null)
 			log("missing docPath/indexPath/goldPath for: " + name);
@@ -225,6 +348,36 @@ public class evalLucene {
 		 analyzer.setType(name, prop); 
 	}
  
+	public Set<String> loadStopWords(String stopwordFile){
+	    InputStream fis;
+	    Set<String> stopwords = new HashSet<String>();
+		try {
+			fis = new FileInputStream(stopwordFile);
+			BufferedReader br = new BufferedReader(new InputStreamReader(fis, Charset.forName("UTF-8")));
+			String line;
+			while ((line = br.readLine()) != null){
+				if (line.isEmpty() || line.startsWith("#")) {
+					continue; // commented out
+			    }
+				stopwords.add(line.trim());
+			}
+			br.close();
+		} catch (FileNotFoundException e) {
+			// stopword file not found
+			log("stopword file not found (" + stopwordFile + "): " + e.getMessage());
+		} catch (IOException e) {
+			// error reading stopword file
+			log("error at loading stopword file '" + stopwordFile + "': " + e.getMessage());
+		} 
+		return stopwords;
+	}
+
+	/**
+	 * index the given catalog (a domain of the corpus: newspaper, literature, stc)
+	 * 
+	 * @param catalogName name of the catalog (domain)
+	 * @param create create index (removing any previous index) or just update
+	 * */
 	public boolean index(String catalogName, boolean create){
 
 		try {
@@ -247,10 +400,6 @@ public class evalLucene {
 			log("Indexing to directory '" + indexPath + "'...");
 			
 			Directory dir = FSDirectory.open(Paths.get(indexPath));
-			   
-			  //IndexWriterConfig iwc = new IndexWriterConfig(Version.LUCENE_5_3_1, analyzer);
-	//			Analyzer analyzer = new StandardAnalyzer();
-				//Analyzer analyzer = new MyAnalyzer();
 			IndexWriterConfig iwc = new IndexWriterConfig(analyzer);
 			
 			if (create) {
@@ -278,8 +427,7 @@ public class evalLucene {
 			log(new String(" " + (end.getTime() - start.getTime()) + " total milliseconds"));
 		
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			log(e.getMessage());
 			return false;
 		}
 		return true;
@@ -291,57 +439,66 @@ public class evalLucene {
 		
 	}
 
-	private void addResult(Map<String, Map<String, String>> mapEvals, String stemmer, String domain, float F){
-		Map<String, String> curr = mapEvals.get(domain);
-		if (curr == null){
-			curr = new HashMap<String, String>();
-			mapEvals.put(domain, curr);
-		}
-		curr.put(stemmer, String.valueOf(F));
-		
+	/**
+	 * it counts the harmonic mean of the recall and the average precision
+	 * 
+	 * @param tp number of true positive items
+	 * @param fp number of false positive items
+	 * @param fn number of false negative items
+	 * @param print precision and recall should be printed or not
+	 * 
+	 * @return F-score
+	 * 
+	 * */
+	private float countFscore(long tp, long fp, long fn, boolean print){
+		float prec = tp+fp==0 ? 0 : (float)tp / (tp + fp);
+		float rec = tp+fn==0 ? 0 : (float)tp / (tp + fn);
+		float F = 2*prec*rec / (prec + rec);
+		if (print) log("  F = " + F + " (prec = "+prec+", rec = "+rec+")");
+		return F;
 	}
 	
 	private void printMetric(String metric, String stemmer, String domain, long tp, long fp, long fn){
 	
 		log("  tp = "+tp+", fp = "+fp+", fn = "+fn);
-		float prec = tp+fp==0 ? 0 : (float)tp / (tp + fp);
-		float rec = tp+fn==0 ? 0 : (float)tp / (tp + fn);
-		float F = 2*prec*rec / (prec + rec);
-		log("  F = " + F + " (prec = "+prec+", rec = "+rec+")");
+		float F = countFscore(tp, fp, fn, true);
+
 		
 		if (metric.equals("full")){
-			addResult(fullEvals, stemmer, domain, 100*F);
+			fullEvals.addResult(stemmer, domain, 100*F, tp, fp, fn);
 		}else{
-			addResult(limitedEvals, stemmer, domain, 100*F);
+			limitedEvals.addResult(stemmer, domain, 100*F, tp, fp, fn);
 		}
 	}
 	
-	private void printSummaMetric(String metric){
-		Map<String, Map<String, String>> mapEvals = limitedEvals;
-		if (metric.equals("full"))
-			mapEvals = fullEvals;
-		System.out.println(metric);
-		//print 1st row: every stemmer
-		for(Map.Entry<String, Map<String, String>> entry : mapEvals.entrySet()){
-			
-			for(Map.Entry<String, String> stemmer : entry.getValue().entrySet()){
-				System.out.print("\t" + stemmer.getKey() + "\t");
-			}
-			break;
-		}
-		System.out.println();
-		// print each row: one domain with each stemmer
-		for(Map.Entry<String, Map<String, String>> entry : mapEvals.entrySet()){
-			
-			System.out.print("\n" + entry.getKey());
-			for(Map.Entry<String, String> stemmer : entry.getValue().entrySet()){
-				System.out.print("\t" + stemmer.getValue());
-			}
-		}
-		System.out.println();
-	}
+	private void printSumma(){
 		
+		System.out.println("full");
+		fullEvals.printSummaMetric();
+		
+		System.out.println("limited");
+		limitedEvals.printSummaMetric();
+	}
 	
+
+	/**
+	 * evaluate the given catalog (domain):
+	 * each word is queried, and the result set is compared to the gold standard.
+	 * True positive, false positive and false negative results are counted, and finally F-score as well
+	 * 
+	 * There are two evaluations: all result items are evaluated and the first n items.
+	 * Latter is able to evaluate the ranking algorithm of the IR itself.
+	 * 
+	 *  format of gold standard file (from catalog.xxx.goldPath in config file): <br/>
+	 *   <original word form> <sentence id list, where this word is occured> <br/>
+	 *   marries 473 <br/>
+	 *   epidemic        24,241 <br/>
+	 *   simple  736,656,677,88,601,701,655 <br/>
+	 *   varied  597 <br/><br/>
+	 *   
+	 *  @param catalogName name of the catalog (newspaper, literature, etc)
+	 *  @param limit limit of the limited evaluation: the first &lt;limit&gt; results are evaluated separately  
+	 * */
 	public void evaluate(String catalogName, int limit){
 		
 		Date start = new Date();
@@ -364,22 +521,30 @@ public class evalLucene {
 				Set<String> gold = new HashSet<String>(Arrays.asList(goldList));
 				Set<String> intersection = new HashSet<String>(gold);
 				intersection.retainAll(curr); // transforms s1 into the intersection of s1 and s2. (The intersection of two sets is the set containing only the elements common to both sets.)
-				int positive = intersection.size();
+//				int positive = intersection.size();
 				fullTP += intersection.size();
 				
+				if (debugLevel > 1){
+					log("in:" + part[0]);
+					log(" tp:" + intersection);
+				}
 				Set<String> num = new HashSet<String>(gold);
 				num.removeAll(curr); // transforms s1 into the (asymmetric) set difference of s1 and s2. (For example, the set difference of s1 minus s2 is the set containing all of the elements found in s1 but not in s2.
 				fullFN += num.size();
 //				long egyik = num.size();
+				if (debugLevel > 1){
+					log(" fn:" + num);
+				}
 				
 				num = new HashSet<String>(curr);
 				num.removeAll(gold); 
 				fullFP += num.size();
+				if (debugLevel > 1){
+					log(" fp:" + num);
+				}
 				
 				//calculate only the 1st n hits
-				// a tp folottiekbol csak limit darabot vesz figyelembe
-				//int subsize = r.size() < positive+limit ? r.size() : positive+limit;
-				// 	csak limit darabot vesz figyelembe
+				// 	we use only the first n (=limit) hits
 				int subsize = r.size() < limit ? r.size() : limit;
 				
 				Set<String> firstNRes = new HashSet<String>(r.subList(0, subsize));
@@ -390,15 +555,13 @@ public class evalLucene {
 				num = new HashSet<String>(gold);
 				num.removeAll(firstNRes); // transforms s1 into the (asymmetric) set difference of s1 and s2. (For example, the set difference of s1 minus s2 is the set containing all of the elements found in s1 but not in s2.
 				fn += num.size();
-//				if (egyik < num.size())
-//					log("azta...");
 				
 				Set<String> numfp = new HashSet<String>(firstNRes);
 				numfp.removeAll(gold); 
 				fp += numfp.size();
 				
 				// a limit felettieket csak log() mertekben veszi figyelembe
-				if (r.size() < limit) continue;
+				/*if (r.size() < limit) continue;
 				firstNRes = new HashSet<String>(r.subList(subsize, r.size()));
 				intersection.retainAll(firstNRes); // transforms s1 into the intersection of s1 and s2. (The intersection of two sets is the set containing only the elements common to both sets.)
 				if (intersection.size() > 0)
@@ -412,7 +575,7 @@ public class evalLucene {
 				numfp = new HashSet<String>(firstNRes);
 				numfp.removeAll(gold); 
 				if (numfp.size() > 0)
-					fp += Math.log10(numfp.size());
+					fp += Math.log10(numfp.size());*/
 
 			}
 			reader.close();
@@ -427,35 +590,29 @@ public class evalLucene {
 			printMetric("full", analyzer.type, catalogName, fullTP, fullFP, fullFN);
 			
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			log(e.getMessage());
 		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			log(e.getMessage());
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			log(e.getMessage());
 		} 
-		
 	}
 	
 	/**
-	 * give the id list of sentences, from lucene index
+	 * give the id list of sentences, from Lucene index
 	 * 
 	 * @param input input word
 	 * @param catalogName catalog (domain) name which we'd like to search in
-	 * @param limit how many hits need (0 means all)
+	 * @param limit how many hits are needed (0 means all)
 	 * */
 	public List<String> query(String input, String catalogName, int limit){
 
 		List<String> res = new ArrayList<String>();
 		try {  		
 			
-			
 			catalog c = catalogs.get(catalogName);
 			IndexReader reader = DirectoryReader.open(FSDirectory.open(Paths.get(c.indexPath)));
 			IndexSearcher searcher = new IndexSearcher(reader);
-			//Analyzer analyzer = new MyAnalyzer();
 			
 			QueryParser parser = new QueryParser("contents", analyzer);
 			Query query = parser.parse(input);
@@ -464,9 +621,6 @@ public class evalLucene {
 			if (n == 0)
 				n = 1;
 			TopDocs results = searcher.search(query, n);
-			
-//			int endPos = Math.min(results.scoreDocs.length, limitStart+limit);
-//		    int startPos = Math.min(results.scoreDocs.length, limitStart);
 	
 			int endPos = limit;
 			if (limit != 0)
@@ -479,68 +633,15 @@ public class evalLucene {
 				Document doc = searcher.doc(id);
 				res.add(doc.get("filename"));
 			}
-//			doPagingSearch(in, searcher, query, 10, false, queries == null && queryString == null);
-			
 			reader.close();
-			
-//			List<IndexReader> r = new ArrayList<IndexReader>();
-//			
-//			IndexReader reader = DirectoryReader.open(FSDirectory.open(new File(defIndexPath)));
-//			r.add(reader);
-//	
-//			MultiReader m = new MultiReader(r.toArray(new IndexReader[r.size()]));
-//	  	  
-//			//IndexReader reader = DirectoryReader.open(FSDirectory.open(new File(getIndexPath(catalog))));
-//	  	
-//			/*IndexReader reader2 = DirectoryReader.open(FSDirectory.open(new File(indexPath)));
-//			MultiReader m = new MultiReader(reader, reader2);
-//			IndexSearcher searcher = new IndexSearcher(reader);
-//	  	*/
-//
-//	  	  IndexSearcher searcher = new IndexSearcher(m);
-//
-//	  	  //Query query = new TermQuery(new Term("content", word));
-//	  	  QueryParser parser = new QueryParser(Version.LUCENE_5_3_1, "content", analyzer);
-//	      Query query = parser.parse(input);
-//	      //limitStart: ettol, limit: ennyit
-//	      // = limitStart/limit
-//	      TopDocs results = searcher.search(query, limitStart+limit);
-//	
-//	      //
-////	      JSONArray jsonList = new JSONArray();
-////	      JSONObject jsonResult = new JSONObject();
-////	      jsonResult.put("total", results.totalHits);
-//	      
-//	      
-//	      int endPos = Math.min(results.scoreDocs.length, limitStart+limit);
-//	      int startPos = Math.min(results.scoreDocs.length, limitStart);
-////	      jsonResult.put("startPos", startPos+1);
-////	      jsonResult.put("endPos", endPos);
-//	      
-//	      
-//	      
-//	      for (int i = startPos; i < endPos; i++) {
-//				int id = results.scoreDocs[i].doc;
-//				Document doc = searcher.doc(id);
-//				res.add(doc.get("filename"));
-//				//String[] pre = {"<span class=''>"};
-//				//String[] ppst = {"</span>"};
-////	    			JSONObject jsonObj=new JSONObject();
-////					jsonObj.put("file",doc.get("path"));
-////					jsonObj.put("score",results.scoreDocs[i].score);
-////					jsonObj.put("hits", hs!=null?hs:new ArrayList<String>());
-////					jsonList.put(jsonObj);
-//	    	  }
-////	      jsonResult.put("results", jsonList);
-	      
 	      return res;
 	      
-	  	} catch (ParseException e1) {
+	  	} catch (ParseException e) {
+	  		log(e.getMessage());
 	  	} catch (IOException e) {	
-	  		
+	  		log(e.getMessage());
 	  	}
 		return res;
-
 	}
 
 	  
@@ -580,8 +681,7 @@ private void indexDocs(final IndexWriter writer, Path path)
  
   /** Indexes a single document */
   static void indexDoc(IndexWriter writer, Path file, long lastModified) throws IOException {
-    //try {
-      InputStream stream = Files.newInputStream(file);
+    try (InputStream stream = Files.newInputStream(file)) {
       // make a new, empty document
       Document doc = new Document();
       
@@ -621,86 +721,63 @@ private void indexDocs(final IndexWriter writer, Path path)
         //log("updating " + file);
         writer.updateDocument(new Term("path", file.toString()), doc);
       }
-    //}
+    }
   }
 
-
-/** Index all text files under a directory. */
-public static void main(String[] args) {
-	
-	
-	String configFile = "stemEval.config";
-//	String stemFromConsole = "";
-	
-	for ( int i=0; i<args.length; ++i ){
-		if(args[i].equalsIgnoreCase("-c"))
-			configFile = args[i+1];
-//		else if(args[i].equalsIgnoreCase("-stemmer"))
-//			stemFromConsole = args[i+1];
-	}
-
-		    
-	
-	
-	try {
-		InputStream is = new FileInputStream(configFile);
-		Properties prop = new Properties();
-		prop.load(is);
+	 
+	/** Evaluate some stemmers with the help of gold standard, generated from a corpus */
+	public static void main(String[] args) {
 		
-		evalLucene c = new evalLucene();
-//		String stemmer = prop.getProperty("stemmerName");
-//		if (!stemFromConsole.isEmpty()) //stemmer parameter from console can override config file
-//			stemmer = stemFromConsole;
+		String configFile = "stemEval.config";
 		
-		String[] stemmersToTests = ((String)prop.get("stemmerName")).split(",");
-		
-		//		  c.setStemmer("hu_light", null);
-		
-		String[] catalogs = ((String)prop.get("catalog.names")).split(",");
-		for (String cat : catalogs) {
-			c.addCatalog(cat, 
-					(String)prop.get("catalog."+cat+".docPath"), 
-					(String)prop.get("catalog."+cat+".indexPath"),
-					(String)prop.get("catalog."+cat+".goldPath"));
+		// custom config file:
+		for ( int i=0; i<args.length; ++i ){
+			if(args[i].equalsIgnoreCase("-c"))
+				configFile = args[i+1];
 		}
 		
-		boolean skipIndexing = prop.get("index").equals("0");
-		int limit = 200;
-		if (prop.getProperty("limit").isEmpty() == false)
-			limit = Integer.parseInt(prop.getProperty("limit"));
-		
-		for (String stemmer : stemmersToTests){
-		
-			c.setStemmer(stemmer, prop);//"C:/data/projects/workspace/stemEvalLucene/dicts/hu_HU");
+		try {
+			InputStream is = new FileInputStream(configFile);
+			Properties prop = new Properties();
+			prop.load(is);
+			
+			evalLucene c = new evalLucene();
+			
+			c.setDebugLevel(Integer.parseInt(prop.getProperty("debugLevel", "0")));
+			String[] stemmersToTests = ((String)prop.get("stemmerName")).split(",");
+			String[] catalogs = ((String)prop.get("catalog.names")).split(",");
 			for (String cat : catalogs) {
-				if (skipIndexing)
-					log("indexing " + cat + " is skipped");
-				else{
-					log("indexing " + cat + " with '" + stemmer + "'...");
-					c.index(cat, true);
-				}	
-				log("query " + cat + "...");
-				c.evaluate(cat, limit);
+				c.addCatalog(cat, 
+						(String)prop.get("catalog."+cat+".docPath"), 
+						(String)prop.get("catalog."+cat+".indexPath"),
+						(String)prop.get("catalog."+cat+".goldPath"));
 			}
+			
+			boolean skipIndexing = prop.get("index").equals("0");
+			int limit = 200;
+			if (prop.getProperty("limit").isEmpty() == false)
+				limit = Integer.parseInt(prop.getProperty("limit"));
+			
+			for (String stemmer : stemmersToTests){
+			
+				c.setStemmer(stemmer, prop);//"C:/data/projects/workspace/stemEvalLucene/dicts/hu_HU");
+				for (String cat : catalogs) {
+					if (skipIndexing)
+						log("indexing " + cat + " is skipped");
+					else{
+						log("indexing " + cat + " with '" + stemmer + "'...");
+						c.index(cat, true);
+					}	
+					log("query " + cat + "...");
+					c.evaluate(cat, limit);
+				}
+			}
+			c.printSumma();
+			log("test is done");
+	
+		} catch (IOException e) {
+			log(e.getMessage());
+			e.printStackTrace(); //perhaps we have even no config and/or log file, so print it
 		}
-		c.printSummaMetric("full");
-		c.printSummaMetric("limited");
-		log("test is done");
-
-	} catch (IOException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
 	}
-	
-	
-	
-	  
 }
-
-}
-
-/*
-
-http://lucene.apache.org/core/4_1_0/highlighter/org/apache/lucene/search/postingshighlight/PostingsHighlighter.html
-https://issues.apache.org/jira/secure/attachment/12480353/LIABookTest.java
-*/
