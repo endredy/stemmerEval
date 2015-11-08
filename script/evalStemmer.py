@@ -220,7 +220,8 @@ while True:
     #   correct means tp, 
     #   incorrect is fn, and
     #   fp is the case when the correct stem exists in the alternatives (but not at the first place)
-    if (gStem == stem):
+#    if (gStem == bestStem): # longest
+    if (len(stems) > 0 and gStem == stems[0]): # 1st stem
         tpF += 1 # eltalalta
     elif (gStem in stems):
 #        print('fp: ' + gStem + '?' + stem)
@@ -375,13 +376,13 @@ for w in goldHits.getWords():
 sys.stdout.write('\n\nsearch eval\n')
 countFscore(stp, sfp, sfn, None)
 
-# Paice test
+# Paice test (it takes lot of time)
 lemmas = goldHits.getPaiceStems()
 stems = currHits.getPaiceStems()
 #print('lemmas = ' + str(lemmas))
 #print('stems = ' + str(stems))
-p = paice.Paice(lemmas, stems)
-print('\nPaice metrics:')
-print(p)
+#p = paice.Paice(lemmas, stems)
+#print('\nPaice metrics:')
+#print(p)
 
 

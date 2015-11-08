@@ -5,7 +5,6 @@ GOLDPATH=../../corpus/goldLemma/en/bnc
 
 mkdir -p eval
 
-# az itteni goldot kell hasznalni, mert ebben vannak jelolve a  mondatok
 function eval(){
 
     python3 $EVALSCRIPT $STOPWORD hunspell/$1.txt $GOLDPATH/$1.bnc.txt base > eval/hunspell.$1
@@ -17,7 +16,6 @@ function eval(){
 #    python3 $EVALSCRIPT $STOPWORD porter/$1.txt $GOLDPATH/$1.bnc.txt > eval/porter.$1
 #    python3 $EVALSCRIPT $STOPWORD  enminimal/$1.txt $GOLDPATH/$1.bnc.txt > eval/enminimal.$1
 
-#    python3 $EVALSCRIPT $STOPWORD foma/$1.txt $GOLDPATH/$1.utf.txt foma > eval/foma.$1
 # no stem
     python3 $EVALSCRIPT $STOPWORD kstem/$1.txt $GOLDPATH/$1.bnc.txt base nostem > eval/nostem.$1
 }
