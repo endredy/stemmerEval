@@ -1,5 +1,4 @@
-#
-Stemmer evaluation tool
+# Stemmer evaluation tool
 
 This tool evaluates stemmers in 2 ways:
 * Metrics on the direct output of the stemmers (python)
@@ -12,8 +11,8 @@ This tool evaluates stemmers in 2 ways:
 
 The tool is published in an article 'Corpus based evalaution of stemmers'.
 
-It contains:
-1. extraction of words and lemmas from corpus. A very little sample is included (1-2 sentences), just to test the code.
+## 1. extraction of words and lemmas from corpus. 
+A very little sample is included (1-2 sentences), just to test the code.
 First, (word, lemma) tuples for lemma accuracy:
 ```
 corpus/goldLemma/en/bnc.sh 
@@ -31,8 +30,7 @@ Second, words and related sentences are extracted for IR evaluation:
 The main idea of this article is that every corpus with lemmas can be used as an IR evaluation data set. In the
 tool presented here, every sentence in the corpus will be the result item of an IR (hit), and its words (in their original forms) are the queries. These word-sentence connections will be used as a gold standard, and each stemmer will be tested against this: calculation of precision and recall is based on the sets of sentences determined by stemmers and by the gold standard.
 
-##
-2. Metrics on the direct output of the stemmers
+## 2. Metrics on the direct output of the stemmers
 
 If (word, lemma) tuples are extracted (see  1. step), then stemming and 6 metrics are applied to the direct output of the stemmers:
 ```
@@ -41,8 +39,7 @@ eval/pl/stem.sh
 eval/hu/stem.sh 
 ```
 
-##
-3. Metrics on the IR quality of the stemmers
+## 3. Metrics on the IR quality of the stemmers
 
 If IR gold standard is generated (see 1. step), then a Lucene based java evalution is applied:
 
@@ -53,8 +50,7 @@ it queries all words of the corpus, and evaluates the result set against the gol
 the java code: 
 java/stemEvalLucene/evalLucene.java 
 
-##
-references:
+## references:
 
 the article:
 Istvan Endredy, 2015, Corpus based evaluation of stemmers
