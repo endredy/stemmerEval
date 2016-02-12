@@ -52,8 +52,22 @@ java/stemEvalLucene/evalLucene.java
 
 ## references:
 
-the article:
-Istvan Endredy, 2015, Corpus based evaluation of stemmers
+If you use the tool, please cite the following paper:
+Istvan Endredy, 2015, Corpus based evaluation of stemmers, Poznan
+
+
+@inproceedings{endstem,
+  author = {Endr\'edy, Istv\'an},
+  booktitle = {7th Language \& Technology Conference: Human Language Technologies as a Challenge for Computer Science and Linguistics},
+  editor = {Zygmunt Vetulani; Joseph Mariani},
+  isbn = {978-83-932640-8-7},
+  publisher = {Pozna\'n: Uniwersytet im. Adama Mickiewicza w Poznaniu},
+  title = {Corpus based evaluation of stemmers},
+  page = {234--239},
+  year = 2015
+}
+
+
 
 used corpora 
 ```
