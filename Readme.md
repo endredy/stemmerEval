@@ -53,6 +53,7 @@ java/stemEvalLucene/evalLucene.java
 ## references:
 
 If you use the tool, please cite the following paper:
+
 Istvan Endredy, 2015, Corpus based evaluation of stemmers, Poznan
 
 ```
