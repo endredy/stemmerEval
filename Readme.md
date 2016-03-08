@@ -58,7 +58,7 @@ Istvan Endredy, 2015, Corpus based evaluation of stemmers, Poznan
 
 ```
 @inproceedings{endstem,
-  author = {Endr\'edy, Istv\'an},
+  author = {Endr{\'e}dy, Istv{\'a}n},
   booktitle = {7th Language \& Technology Conference: Human Language Technologies as a Challenge for Computer Science and Linguistics},
   editor = {Zygmunt Vetulani; Joseph Mariani},
   isbn = {978-83-932640-8-7},
