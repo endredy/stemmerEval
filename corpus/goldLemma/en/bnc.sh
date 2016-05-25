@@ -10,7 +10,7 @@ function convertBNCdirectory(){
     for f in $1/*.xml
     do
       echo "converting file $f ..."
-      python extractWordsBNC.py $f > ./bnc/$(basename $f).txt
+      python extractWordsBNC.py "$f" > "./bnc/$(basename $f).txt"
     done
 }
 

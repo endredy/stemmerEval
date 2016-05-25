@@ -7,16 +7,24 @@ import argparse
 from nltk.metrics import paice
 
 import word2sentence
-import stemFileReaders
 
-# visszaadja a toveket, elso eleme a nyertes to
+# it gives the stems, 1st one is the winner stem
 def getGoldStems(s):
     t=s.split('\t')
     v=t[1].split('(')
     if len(v) == 1:
         x = v[0].strip()
-        return (x, x) # nincs () benne, csak egy tove (angol)
-    return (v[0], v[1].split(','))
+        return (t[0], x, x) # there is no ()  it has only 1 stem (en)
+    return (t[0], v[0], v[1].split(','))
+
+
+# there can be POS info with the stem
+def isStopword(stem, stopwords):
+    s = stem.split('[')
+    if len(s) > 1:
+        s1 = '['.join(s[0:-1]) # without last item
+        return s1 in stopwords
+    return s in stopwords
 
 # parameters:
 #  <stopword file> <stem file> <gold std file> <format> <no stem, optionally>
@@ -44,23 +52,10 @@ if p.nostem == 'nostem':
     nostem = 1
 
 print(p.gold)
-inputFormat = p.format
-if (inputFormat == 'base'):
-    f = stemFileReaders.StemReader(p.stemfile, nostem)
-elif (inputFormat == 'ocamorph'):
-    f = stemFileReaders.StemReaderOcamorf(p.stemfile)
-elif (inputFormat == 'ocastem'):
-    f = stemFileReaders.StemReaderOcastem(p.stemfile)
-elif (inputFormat == 'foma'):
-    f = stemFileReaders.StemReaderFoma(p.stemfile)
-else:
-    print('unknown stem file format: ' + inputFormat)
-    sys.exit(0)
-
 fGold = open(p.gold,'r')
 debug = 0
 fullSents = p.fullSents
-fullSentPath= p.fullSentsPath#'sentences'
+fullSentPath= p.fullSentsPath
 goldSentFilename = ''
 
 if fullSents:
@@ -78,22 +73,17 @@ if debug:
 sentID = 0
 currSent = []
 goldHits = word2sentence.word2sentence()
-currHits = word2sentence.word2sentence()
 inputWord = ''
-stems=[]#set()
+stems=[]
 stem=''
 first=1
 
 goldLemmas={}
 onlyPunct = re.compile('^\W+$') # it contains only punctuation
 
-while True:
-    (word, stems) = f.getNextWordAndStems()
-    if word == None:
-        break
+for goldLine in fGold:
 
-    goldLine = fGold.readline()
-    while (goldLine.strip() == ''):
+    if (goldLine.strip() == ''):
         # new sentence
         if fullSents:
             prefix = str(int(sentID / 1000))
@@ -106,25 +96,23 @@ while True:
         if debug:
             fDebug.write('\n\nsentID:' + str(sentID) + '\n')
             fDebug.write('\n'.join(currSent))
-            currSent = []
 
-        sentID += 1 # new sentence
-        goldLine = fGold.readline()
-    if debug:
-        currSent.append(word.strip())
-    if inputFormat == 'foma':
-        word = f.getWord(goldLine)
-    (gStem, gStemList) = getGoldStems(goldLine)
+        currSent = []
+
+        sentID += 1 # new sentence 
+        continue
+
+    (word, gStem, gStemList) = getGoldStems(goldLine)
+    currSent.append(word.strip())
     if onlyPunct.match(word) != None:
         continue # words are ignored which contain only punctuation
 
-    word = word.lower()
-    gStem = gStem.lower()
-    if gStem in stopwords:
+#    word = word.lower()
+#    gStem = gStem.lower()
+    if isStopword(gStem.lower(), stopwords):
         continue # stopword: SKIP
+#    print(word + ' ' + gStem + ' ' + str(sentID))
     goldHits.addHit(word, gStem, sentID)  # TODO: a kis/nagybetut az inputrol at kene masolni
-    for s in stems:
-        currHits.addHit(word, s, sentID)
 
 if debug:
     fDebug.close()
@@ -137,6 +125,8 @@ if fullSents:
 for w in goldHits.getWords():
     sIdsGold = goldHits.getSentIDs(w)
 
+    #debug info:
+    #print(goldHits.getWordsByStem(w))
     if fullSents:
         goldSentFile.write(w + '\t' + ",".join(str(e) for e in sIdsGold) + '\n')
         continue

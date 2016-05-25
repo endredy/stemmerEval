@@ -4,11 +4,12 @@ function convertBNCdirectory(){
     for f in $1/*/ann_morphosyntax.xml
     do
       echo "converting file $f ..."
-      python extractWordsPOL.py $f >> ./pnc/$(basename $f).txt
+      python extractWordsPOL.py "$f" >> "./pnc/$(basename $f).txt"
     done
 }
 
-
+mkdir -p ./pnc
+rm -f ./pnc/*.txt
 #convertBNCdirectory /common/resources/corpora/polish_1_million
 convertBNCdirectory sample
 

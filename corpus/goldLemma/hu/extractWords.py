@@ -3,14 +3,20 @@ import sys
 import re
 #import gzip
 
+# create gold standard with (1) or without Part-of-Speech (0)
+POSinfo=1
 
 # <humor><lemma>termel.s</lemma><mscat>[Nc-sn---p3]</mscat></humor>
 # <msd><lemma>termel.s</lemma><mscat>[Nc-sn---p3]</mscat></msd>
 def getLemma(s):
-    lemmaRegEx = re.compile(r'<msd><lemma>(.*?)</lemma>', re.DOTALL)
+    lemmaRegEx = re.compile(r'<msd><lemma>(.*?)</lemma>.*?<mscat>(.*?)</mscat>', re.DOTALL)
     x = lemmaRegEx.findall(s)
     if (len(x) > 0):
-        return getLastWord(x[0])
+        pos = x[0][1][1:2]
+        pos = '[' + pos + ']'
+        if POSinfo == 0:
+            pos = ''
+        return getLastWord(x[0][0]+pos)
     return ""
 
 def getLastWord(s):
